@@ -5,34 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter | Alexa-dis</title>
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/sass/style.css">
 </head>
 <body>
     <section class="main__section">
-        <div class="wrapper">
             <header class="header">
-                <div class="logo__wrapper">
-                    <a href="#" class="logo">
-                        <h1>Cozy House</h1>
-                        <p>Shelter for pets in Boston</p>
-                    </a>
+                <div class="wrapper header__wrapper">
+                    <div class="logo__wrapper">
+                        <a href="#" class="logo">
+                            <h1 class="logo__titile">Cozy House</h1>
+                            <p class="logo__subtitile">Shelter for pets in Boston</p>
+                        </a>
+                    </div>
+                    <nav class="header__navigation">
+                        <ul class="navigation">
+                            <li><a class="navigation_link active" href="../main/index.html">About the shelter</a></li>
+                            <li><a class="navigation_link" href="../pets/index.html">Our pets</a></li>
+                            <li><a class="navigation_link" href="">Help the shelter</a></li>
+                            <li><a class="navigation_link" href="">Contacts</a></li> 
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="header__navigation">
-                    <ul class="navigation">
-                        <li><a href="../main/index.html">About the shelter</a></li>
-                        <li><a href="../pets/index.html">Our pets</a></li>
-                        <li><a href="">Help the shelter</a></li>
-                        <li><a href="">Contacts</a></li> 
-                    </ul>
-                </nav>
             </header>
             <section class="start__screen">
-                <div class="start__screen__content">
-                    <h2 class="headling_on_right">Not only people need a house</h2>
-                    <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                    <button class="button button_colored">Make a friend</button>
+                <div class="wrapper start__wrapper">
+                    <div class="start__screen__content">
+                        <h2 class="headling_on_right">Not only people need a house</h2>
+                        <p class="start__subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                        <button class="button button_colored">Make a friend</button>
+                    </div>
+                    <div class="start__img__wrapper">
+                        <img class="start__img" src="/assets/images/start-screen-puppy.png" alt="">
+                    </div>
                 </div>
             </section>
-        </div>
     </section>
     <section class="about__section">
         <div class="wrapper">
@@ -54,17 +61,17 @@
                 <div class="pets__cards">
                     <div class="card card_active">
                         <img src="/assets/images/pets-katrine.png" alt="pets-katrine">
-                        <p>Katrine</p>
+                        <h4>Katrine</h4>
                         <button class="button button_bordered">Learn more</button>
                     </div>
                     <div class="card">
                         <img src="/assets/images/pets-jennifer.png" alt="pets-jennifer">
-                        <p>Jennifer</p>
+                        <h4>Jennifer</h4>
                         <button class="button button_bordered">Learn more</button>
                     </div>
                     <div class="card">
                         <img src="/assets/images/pets-woody.png" alt="pets-woody">
-                        <p>Woody</p>
+                        <h4>Woody</h4>
                         <button class="button button_bordered">Learn more</button>
                     </div>
                 </div>
@@ -79,39 +86,39 @@
             <div class="help__list">
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-pet-food.svg" alt="pet-food">
-                    <p class="help__item__text">Pet food</p>
+                    <h4 class="help__item__text">Pet food</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-transportation.svg" alt="transportation">
-                    <p class="help__item__text">Transportation</p>
+                    <h4 class="help__item__text">Transportation</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-toys.svg" alt="toys">
-                    <p class="help__item__text">Toys</p>
+                    <h4 class="help__item__text">Toys</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-bowls-and-cups.svg" alt="bowls-and-cups">
-                    <p class="help__item__text">Bowls and cups</p>
+                    <h4 class="help__item__text">Bowls and cups</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-shampoos.svg" alt="shampoos">
-                    <p class="help__item__text">Shampoos</p>
+                    <h4 class="help__item__text">Shampoos</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-vitamins.svg" alt="vitamins">
-                    <p class="help__item__text">Vitamins</p>
+                    <h4 class="help__item__text">Vitamins</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-medicines.svg" alt="medicines">
-                    <p class="help__item__text">Medicines</p>
+                    <h4 class="help__item__text">Medicines</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-collars-leashes.svg" alt="collars-leashes">
-                    <p class="help__item__text">Collars / leashes</p>
+                    <h4 class="help__item__text">Collars / leashes</h4>
                 </div>
                 <div class="help__item">
                     <img class="help__item__img" src="/assets/icons/icon-sleeping-area.svg" alt="sleeping-area">
-                    <p class="help__item__text">Sleeping areas</p>
+                    <h4 class="help__item__text">Sleeping areas</h4>
                 </div>
             </div>
         </div>
@@ -139,22 +146,22 @@
                     <h3 class="headling_on_right"></h3>
                     <div class="email">
                         <span class="email_icon"></span>
-                        <p class="email_text">email@shelter.com</p>
+                        <h4 class="email_text">email@shelter.com</h4>
                     </div>
                     <div class="phone">
                         <span class="phone_icon"></span>
-                        <p class="phone_number">+13 674 567 75 54</p>
+                        <h4 class="phone_number">+13 674 567 75 54</h4>
                     </div>
                 </div>
                 <div class="footer__lications">
                     <h3 class="headling_on_right"></h3>
                     <div class="location">
                         <span class="location_icon"></span>
-                        <p class="location_text">1 Central Street, Boston (entrance from the store)</p>
+                        <h4 class="location_text">1 Central Street, Boston (entrance from the store)</h4>
                     </div>
                     <div class="location">
                         <span class="location_icon"></span>
-                        <p class="location_text">18 South Park, London </p>
+                        <h4 class="location_text">18 South Park, London </h4>
                     </div>
                 </div>
                 <img src="/assets/images/footer-puppy.png" alt="footer-puppy">

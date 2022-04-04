@@ -1,0 +1,22 @@
+.main__section {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+.start__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.start__subheading {
+    font-family: 'Arimo', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-s;
+    padding: 42px 0 ;
+}
+
+.start__img {
+    width: 698px;
+    height: 728px;
+}

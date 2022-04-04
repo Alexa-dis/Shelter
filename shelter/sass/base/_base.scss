@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Tinos&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Tinos', serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-primary;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    color: $color-light-xl;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em; 
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em; 
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: $color-dark-l;
+}
