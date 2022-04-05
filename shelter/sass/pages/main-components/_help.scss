@@ -1,0 +1,28 @@
+.help__heading {
+    margin-top: 80px;
+}
+
+.help__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 87px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.help__list_1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.help__list_2 {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 84px*2);
+    margin-top: 25px;
+}
+
+.help__item {
+    text-align: center;
+}

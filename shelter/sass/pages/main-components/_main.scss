@@ -7,6 +7,10 @@
     justify-content: space-between;
 }
 
+.start__screen__content{
+    margin-top: 162px;
+}
+
 .start__subheading {
     font-family: 'Arimo', serif;
     font-weight: 400;
@@ -14,9 +18,13 @@
     line-height: 160%;
     color: $color-dark-s;
     padding: 42px 0 ;
+    max-width: 460px;
 }
 
-.start__img {
+.start__img__wrapper {
     width: 698px;
     height: 728px;
+}
+.start__img {
+    
 }

@@ -1,0 +1,45 @@
+.button {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.07em;
+    padding: 13px 47px;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+    cursor: pointer;
+    background: transparent;
+}
+
+.button_colored {
+    background: $color-primary;
+}
+
+.button_bordered{
+    margin-bottom: 30px;
+}
+
+.button__circle {
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+}
+
+.button__circle__bordered {
+    border: 2px solid #F1CDB3;
+}
+
+.slider__arrow_left {
+    background-image: url(/assets/icons/Arrow_left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slider__arrow_right {
+    background-image: url(/assets/icons/Arrow_right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pets_clider__buttons{
+    margin-top: 192px;
+}

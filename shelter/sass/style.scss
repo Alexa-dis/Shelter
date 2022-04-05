@@ -1,9 +1,14 @@
 
 @import "abstract/constants";
 @import "layouts/wrapper";
+
+//Base
 @import "base/base";
+@import "base/buttons";
 
 //Components
 @import "pages/main-components/main";
 @import "pages/main-components/header";
 @import "pages/main-components/pets";
+@import "pages/main-components/about";
+@import "pages/main-components/help";

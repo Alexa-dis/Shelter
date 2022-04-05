@@ -17,7 +17,7 @@ h1 {
   font-weight: 400;
   font-size: 32px;
   line-height: 110%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: #F1CDB3;
 }
 
@@ -26,20 +26,22 @@ h2 {
   font-size: 44px;
   line-height: 130%;
   color: #FFFFFF;
+  letter-spacing: 0.04em;
 }
 
 h3 {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
 }
 
 h4 {
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  margin: 24px 0 31px;
 }
 
 h5 {
@@ -48,6 +50,53 @@ h5 {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #545454;
+}
+
+.button {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.07em;
+  padding: 13px 47px;
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  cursor: pointer;
+  background: transparent;
+}
+
+.button_colored {
+  background: #F1CDB3;
+}
+
+.button_bordered {
+  margin-bottom: 30px;
+}
+
+.button__circle {
+  box-sizing: border-box;
+  border-radius: 100px;
+  width: 52px;
+  height: 52px;
+}
+
+.button__circle__bordered {
+  border: 2px solid #F1CDB3;
+}
+
+.slider__arrow_left {
+  background-image: url(/assets/icons/Arrow_left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider__arrow_right {
+  background-image: url(/assets/icons/Arrow_right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pets_clider__buttons {
+  margin-top: 192px;
 }
 
 .main__section {
@@ -59,6 +108,10 @@ h5 {
   justify-content: space-between;
 }
 
+.start__screen__content {
+  margin-top: 162px;
+}
+
 .start__subheading {
   font-family: "Arimo", serif;
   font-weight: 400;
@@ -66,9 +119,10 @@ h5 {
   line-height: 160%;
   color: #CDCDCD;
   padding: 42px 0;
+  max-width: 460px;
 }
 
-.start__img {
+.start__img__wrapper {
   width: 698px;
   height: 728px;
 }
@@ -96,6 +150,7 @@ h5 {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
+  padding-bottom: 2px;
 }
 
 .active {
@@ -114,10 +169,90 @@ h5 {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
+  padding-left: 4px;
 }
 
 .pets__section {
   background-color: #F6F6F6;
+  padding: 80px 0 100px 0;
+  text-align: center;
+}
+
+.headling_centered {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pets__slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pets__cards {
+  display: flex;
+  justify-content: space-between;
+  max-width: 990px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.card {
+  text-align: center;
+  background-color: #FAFAFA;
+  border-radius: 9px;
+}
+
+.about__section__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 175px 100px;
+}
+
+.about__section__text {
+  max-width: 430px;
+}
+
+.about__spacer {
+  margin-bottom: 25px;
+}
+
+.about__subheading {
+  font-family: "Arimo", serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #4C4C4C;
+}
+
+.help__heading {
+  margin-top: 80px;
+}
+
+.help__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 87px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.help__list_1 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.help__list_2 {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 168px);
+  margin-top: 25px;
+}
+
+.help__item {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,22 @@
+.about__section__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 175px 100px;
+}
+
+.about__section__text {
+    max-width: 430px;
+}
+
+.about__spacer {
+    margin-bottom: 25px;
+}
+
+.about__subheading {
+    font-family: 'Arimo', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-xl;
+}

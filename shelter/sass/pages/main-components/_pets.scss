@@ -1,3 +1,30 @@
 .pets__section{
     background-color: $color-light-l;
+    padding: 80px 0 100px 0;
+    text-align: center;
 }
+
+.headling_centered{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pets__slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pets__cards {
+    display: flex;
+    justify-content: space-between;
+    max-width: 990px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.card {
+    text-align: center;
+    background-color: $color-light-s;
+    border-radius: 9px;
+}
+
