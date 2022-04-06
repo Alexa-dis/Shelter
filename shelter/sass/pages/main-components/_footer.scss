@@ -1,0 +1,68 @@
+.footer {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+.footer__content {
+    display: flex;
+    padding: 40px 0 0 0;
+}
+
+.footer__contacts, .footer__lications {
+    display: flex;
+    flex-direction: column;
+    max-width: 302px;
+    width: 100%;
+    margin-top: 16px;
+    margin-right: 137px;
+}
+
+.email {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+}
+.email_icon {
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    background-image: url(/assets/icons/icon-email.svg);
+    margin: 17px 20px 0 0;
+}
+
+.phone {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+}
+.phone_icon {
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    background-image: url(/assets/icons/icon-phone.svg);
+    margin: 18px 20px 0 0;
+}
+
+.location {
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.location_icon {
+    width: 22px;
+    height: 32px;
+    display: inline-block;
+    background-image: url(/assets/icons/icon-marker.svg);
+    margin: 16px 0 0 0;
+}
+
+.location_text {
+    margin-left: 20px;
+}
+
+.footer_puppy {
+    margin-left: 25px;
+}

@@ -2,27 +2,45 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 130%;
-    letter-spacing: 0.07em;
-    padding: 13px 47px;
+    letter-spacing: 0.06em;
+    padding: 13px 44px;
     border-radius: 100px;
-    border: 2px solid #F1CDB3;
+    border: 2px solid $color-primary;
     cursor: pointer;
     background: transparent;
+    transition: 0.3s;
 }
 
 .button_colored {
     background: $color-primary;
+    &:hover {
+        transition: 0.3s;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
 }
 
 .button_bordered{
     margin-bottom: 30px;
+    &:hover {
+        transition: 0.3s;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
 }
 
 .button__circle {
+    cursor: pointer;
     box-sizing: border-box;
     border-radius: 100px;
     width: 52px;
     height: 52px;
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
 }
 
 .button__circle__bordered {

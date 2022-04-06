@@ -23,8 +23,18 @@
 }
 
 .card {
+    cursor: pointer;
     text-align: center;
     background-color: $color-light-s;
     border-radius: 9px;
+    transition: 0.3s;
+    &:hover {
+        background-color: $color-light-xl;
+    }
+    &:hover .button_bordered {
+        background-color: $color-primary-light;
+        border: 2px solid $color-primary-light;
+    }
+
 }
 

@@ -1,23 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Tinos&display=swap");
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/aria/ArialTh.ttf);
+}
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/georgia/Georgia\ Regular\ font.ttf);
+}
 html {
   font-size: 10px;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: "Tinos", serif;
+  font-family: "Georgia", serif;
 }
 
 h1 {
   font-weight: 400;
   font-size: 32px;
   line-height: 110%;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: #F1CDB3;
 }
 
@@ -26,22 +37,21 @@ h2 {
   font-size: 44px;
   line-height: 130%;
   color: #FFFFFF;
-  letter-spacing: 0.04em;
 }
 
 h3 {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
 }
 
 h4 {
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: 0.08em;
-  margin: 24px 0 31px;
+  letter-spacing: 0.06em;
+  margin: 24px 0 0;
 }
 
 h5 {
@@ -56,27 +66,45 @@ h5 {
   font-weight: 400;
   font-size: 17px;
   line-height: 130%;
-  letter-spacing: 0.07em;
-  padding: 13px 47px;
+  letter-spacing: 0.06em;
+  padding: 13px 44px;
   border-radius: 100px;
   border: 2px solid #F1CDB3;
   cursor: pointer;
   background: transparent;
+  transition: 0.3s;
 }
 
 .button_colored {
   background: #F1CDB3;
 }
+.button_colored:hover {
+  transition: 0.3s;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
 
 .button_bordered {
   margin-bottom: 30px;
 }
+.button_bordered:hover {
+  transition: 0.3s;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
 
 .button__circle {
+  cursor: pointer;
   box-sizing: border-box;
   border-radius: 100px;
   width: 52px;
   height: 52px;
+  transition: 0.3s;
+}
+.button__circle:hover {
+  transition: 0.3s;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .button__circle__bordered {
@@ -113,7 +141,7 @@ h5 {
 }
 
 .start__subheading {
-  font-family: "Arimo", serif;
+  font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
@@ -145,12 +173,17 @@ h5 {
 
 .navigation_link {
   margin-left: 35px;
-  font-family: "Arimo", serif;
+  font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
   padding-bottom: 2px;
+  transition: 0.3s;
+}
+.navigation_link:hover {
+  transition: 0.3s;
+  color: #FAFAFA;
 }
 
 .active {
@@ -164,7 +197,7 @@ h5 {
 
 .logo__subtitile {
   color: #FFFFFF;
-  font-family: "Arimo", serif;
+  font-family: "Arial", serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
@@ -197,9 +230,18 @@ h5 {
 }
 
 .card {
+  cursor: pointer;
   text-align: center;
   background-color: #FAFAFA;
   border-radius: 9px;
+  transition: 0.3s;
+}
+.card:hover {
+  background-color: #FFFFFF;
+}
+.card:hover .button_bordered {
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 .about__section__content {
@@ -218,11 +260,15 @@ h5 {
 }
 
 .about__subheading {
-  font-family: "Arimo", serif;
+  font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   color: #4C4C4C;
+}
+
+.pet__name {
+  margin-bottom: 30px;
 }
 
 .help__heading {
@@ -235,13 +281,14 @@ h5 {
   flex-wrap: wrap;
   padding: 0 87px;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .help__list_1 {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 31px;
 }
 
 .help__list_2 {
@@ -249,10 +296,146 @@ h5 {
   justify-content: space-between;
   width: calc(100% - 168px);
   margin-top: 25px;
+  margin-bottom: 31px;
 }
 
 .help__item {
   text-align: center;
+}
+
+.donation__section {
+  background-color: #F6F6F6;
+}
+
+.donation__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 915px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0 100px 0;
+}
+
+.donation__section__text {
+  max-width: 380px;
+}
+
+.donation__subheading {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding: 20px 0;
+}
+
+.legal_inf {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+
+.credit_card {
+  width: 349px;
+  height: 43px;
+  border-radius: 9px;
+  background-color: #F1CDB3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.credit_card__number {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  margin-left: 15px;
+}
+
+.credit_card__icon {
+  display: inline-block;
+  width: 30px;
+  height: 23px;
+  background-image: url(/assets/icons/credit-card.svg);
+  margin-left: 15px;
+}
+
+.footer {
+  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
+.footer__content {
+  display: flex;
+  padding: 40px 0 0 0;
+}
+
+.footer__contacts, .footer__lications {
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+  width: 100%;
+  margin-top: 16px;
+  margin-right: 137px;
+}
+
+.email {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: #F1CDB3;
+}
+
+.email_icon {
+  width: 40px;
+  height: 32px;
+  display: inline-block;
+  background-image: url(/assets/icons/icon-email.svg);
+  margin: 17px 20px 0 0;
+}
+
+.phone {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  color: #F1CDB3;
+}
+
+.phone_icon {
+  width: 40px;
+  height: 32px;
+  display: inline-block;
+  background-image: url(/assets/icons/icon-phone.svg);
+  margin: 18px 20px 0 0;
+}
+
+.location {
+  color: #F1CDB3;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.location_icon {
+  width: 22px;
+  height: 32px;
+  display: inline-block;
+  background-image: url(/assets/icons/icon-marker.svg);
+  margin: 16px 0 0 0;
+}
+
+.location_text {
+  margin-left: 20px;
+}
+
+.footer_puppy {
+  margin-left: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

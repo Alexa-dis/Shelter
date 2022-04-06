@@ -3,6 +3,7 @@
 @import "layouts/wrapper";
 
 //Base
+@import "base/fonts";
 @import "base/base";
 @import "base/buttons";
 
@@ -12,3 +13,5 @@
 @import "pages/main-components/pets";
 @import "pages/main-components/about";
 @import "pages/main-components/help";
+@import "pages/main-components/donation";
+@import "pages/main-components/footer";

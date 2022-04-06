@@ -8,19 +8,21 @@
     flex-wrap: wrap;
     padding: 0 87px;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .help__list_1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 31px;
 }
 .help__list_2 {
     display: flex;
     justify-content: space-between;
     width: calc(100% - 84px*2);
     margin-top: 25px;
+    margin-bottom: 31px;
 }
 
 .help__item {

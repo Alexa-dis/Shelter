@@ -15,12 +15,17 @@
 
 .navigation_link{
     margin-left: 35px;
-    font-family: 'Arimo', serif;
+    font-family: 'Arial', serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-s;
     padding-bottom: 2px;
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+        color: $color-light-s;
+    }
 }
 
 .active {
@@ -34,7 +39,7 @@
 
 .logo__subtitile{
     color: $color-light-xl;
-    font-family: 'Arimo', serif;
+    font-family: 'Arial', serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 15px;
