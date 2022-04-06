@@ -17,6 +17,7 @@
 }
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -67,6 +68,7 @@ h5 {
   font-size: 17px;
   line-height: 130%;
   letter-spacing: 0.06em;
+  color: #292929;
   padding: 13px 44px;
   border-radius: 100px;
   border: 2px solid #F1CDB3;
@@ -356,6 +358,7 @@ h5 {
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
+  color: #545454;
   margin-left: 15px;
 }
 
@@ -385,7 +388,7 @@ h5 {
   margin-right: 137px;
 }
 
-.email {
+.mail-to {
   margin-top: 20px;
   display: flex;
   align-items: center;
@@ -400,7 +403,7 @@ h5 {
   margin: 17px 20px 0 0;
 }
 
-.phone {
+.phone-to {
   margin-top: 22px;
   display: flex;
   align-items: center;
@@ -415,7 +418,7 @@ h5 {
   margin: 18px 20px 0 0;
 }
 
-.location {
+.location-to {
   color: #F1CDB3;
   display: flex;
   align-items: center;

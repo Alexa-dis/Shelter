@@ -22,8 +22,8 @@
                         <ul class="navigation">
                             <li><a class="navigation_link active" href="../main/index.html">About the shelter</a></li>
                             <li><a class="navigation_link" href="../pets/index.html">Our pets</a></li>
-                            <li><a class="navigation_link" href="">Help the shelter</a></li>
-                            <li><a class="navigation_link" href="">Contacts</a></li> 
+                            <li><a class="navigation_link" href="#help">Help the shelter</a></li>
+                            <li><a class="navigation_link" href="#contacts">Contacts</a></li> 
                         </ul>
                     </nav>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="start__screen__content">
                         <h2 class="headling_on_right">Not only people <br> need a house</h2>
                         <p class="start__subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                        <button class="button button_colored">Make a friend</button>
+                        <a href="#our_friends" class="button button_colored">Make a friend</a>
                     </div>
                     <div class="start__img__wrapper">
                         <img class="start__img" src="/assets/images/start-screen-puppy.png" alt="">
@@ -53,7 +53,7 @@
             </div>
         </div>
     </section>
-    <section class="pets__section">
+    <section id="our_friends" class="pets__section">
         <div class="wrapper">
             <h3 class="headling_centered">Our friends who <br> are looking for a house</h3>
             <div class="pets__slider">
@@ -80,7 +80,7 @@
             <button onclick="document.location='../pets/index.html'" class="button button_colored">Get to know the rest</button>
         </div>
     </section>
-    <section class="help__section">
+    <section id="help" class="help__section">
         <div class="wrapper">
             <h3 class="headling_centered help__heading">How you can help <br>our shelter</h3>
             <div class="help__list">
@@ -136,36 +136,44 @@
                     <p class="donation__subheading">Name of the bank / Type of bank account</p>
                     <div class="credit_card">
                         <span class="credit_card__icon"></span>
-                        <p class="credit_card__number">8380 2880 8028 8791 7435</p>
+                        <a href="#" class="credit_card__number">8380 2880 8028 8791 7435</a>
                     </div>
                     <p class="legal_inf">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                 </div>
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer id="contacts" class="footer">
         <div class="wrapper">
             <div class="footer__content">
                 <div class="footer__contacts">
                     <h3 class="headling_on_right">For questions <br> and suggestions</h3>
                     <div class="email">
-                        <span class="email_icon"></span>
-                        <h4 class="email_text">email@shelter.com</h4>
+                        <a class="mail-to" href="mailto:email@shelter.com">
+                            <span class="email_icon"></span>
+                            <h4 class="email_text">email@shelter.com</h4>
+                        </a>
                     </div>
                     <div class="phone">
-                        <span class="phone_icon"></span>
-                        <h4 class="phone_number">+13 674 567 75 54</h4>
+                        <a class="phone-to" href="tel:+136745677554">
+                            <span class="phone_icon"></span>
+                            <h4 class="phone_number">+13 674 567 75 54</h4>
+                        </a>
                     </div>
                 </div>
                 <div class="footer__lications">
                     <h3 class="headling_on_right">We are waiting<br>for your visit</h3>
                     <div class="location">
-                        <span class="location_icon"></span>
-                        <h4 class="location_text">1 Central Street, Boston<br>(entrance from the store)</h4>
+                        <a class="location-to" href="https://goo.gl/maps/obu7bpdw7Lhag37M6" target="_blank">
+                            <span class="location_icon"></span>
+                            <h4 class="location_text">1 Central Street, Boston<br>(entrance from the store)</h4>
+                        </a>
                     </div>
                     <div class="location">
-                        <span class="location_icon"></span>
-                        <h4 class="location_text">18 South Park, London </h4>
+                        <a class="location-to" href="https://goo.gl/maps/1KrkHdawkdYVxF3eA" target="_blank">
+                            <span class="location_icon"></span>
+                            <h4 class="location_text">18 South Park, London </h4>
+                        </a>
                     </div>
                 </div>
                 <img class="footer_puppy" src="/assets/images/footer-puppy.png" alt="footer-puppy">
