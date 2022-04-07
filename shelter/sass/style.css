@@ -1,6 +1,7 @@
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 @font-face {
@@ -158,9 +159,27 @@ h5 {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1024px) {
+  .start__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .start__wrapper {
+    margin-left: 16%;
+  }
+}
 
 .start__screen__content {
   margin-top: 162px;
+}
+@media (max-width: 1024px) {
+  .start__screen__content {
+    margin-top: 60px;
+  }
 }
 
 .start__subheading {
@@ -169,7 +188,7 @@ h5 {
   font-size: 15px;
   line-height: 160%;
   color: #CDCDCD;
-  padding: 42px 0;
+  padding: 42px 0 57px 0;
   max-width: 460px;
 }
 
@@ -177,9 +196,32 @@ h5 {
   width: 698px;
   height: 728px;
 }
+@media (max-width: 1024px) {
+  .start__img__wrapper {
+    margin-top: 100px;
+    width: 569px;
+    height: 593px;
+  }
+}
+
+.start__img {
+  width: 569px;
+  height: 593px;
+}
+
+@media (max-width: 1024px) {
+  .start_button {
+    margin-left: 28%;
+  }
+}
 
 .header {
   padding: 60px 0;
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 30px 0 0 0;
+  }
 }
 
 .header__wrapper {
@@ -249,7 +291,7 @@ h5 {
   justify-content: space-between;
   max-width: 990px;
   width: 100%;
-  margin-bottom: 60px;
+  margin: 0 10px 60px 10px;
 }
 
 .card {
@@ -292,6 +334,10 @@ h5 {
 
 .pet__name {
   margin-bottom: 30px;
+}
+
+.about-pets__img {
+  margin-right: 40px;
 }
 
 .help__heading {
@@ -395,9 +441,17 @@ h5 {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px 0 20px;
+}
+
 .footer__content {
   display: flex;
-  padding: 40px 0 0 0;
+  max-width: 740px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer__contacts, .footer__lications {
@@ -406,7 +460,6 @@ h5 {
   max-width: 302px;
   width: 100%;
   margin-top: 16px;
-  margin-right: 137px;
 }
 
 .mail-to {

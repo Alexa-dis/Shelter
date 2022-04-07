@@ -2,9 +2,17 @@
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px 0 20px;
+}
+
 .footer__content {
     display: flex;
-    padding: 40px 0 0 0;
+    max-width: 740px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer__contacts, .footer__lications {
@@ -13,7 +21,6 @@
     max-width: 302px;
     width: 100%;
     margin-top: 16px;
-    margin-right: 137px;
 }
 
 .mail-to {
