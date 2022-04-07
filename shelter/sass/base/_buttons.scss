@@ -37,6 +37,12 @@
     width: 52px;
     height: 52px;
     transition: 0.3s;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
     &:hover {
         transition: 0.3s;
         background-color: $color-primary-light;
@@ -44,8 +50,23 @@
     }
 }
 
+.button__circle__bordered__inactive {
+    border: 2px solid $color-dark-s;
+    background-color: $color-light-l;
+    color: $color-dark-s;
+    &:hover {
+        border: 2px solid $color-dark-s;
+        background-color: $color-light-l;
+    }
+}
+
 .button__circle__bordered {
-    border: 2px solid #F1CDB3;
+    border: 2px solid $color-primary;
+}
+
+.button__circle__colored{
+    background-color: $color-primary;
+    border: 2px solid $color-primary ;
 }
 
 .slider__arrow_left {
