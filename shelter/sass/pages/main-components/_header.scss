@@ -7,7 +7,7 @@
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .navigation {
@@ -17,13 +17,13 @@
 }
 
 .navigation_link {
-  margin-left: 35px;
+  margin-left: 36px;
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-s;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   transition: 0.3s;
   &:hover {
     transition: 0.3s;

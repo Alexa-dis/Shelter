@@ -4,27 +4,22 @@
 
 .help__list {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    padding: 0 87px;
+    column-gap: 120px;
+    row-gap: 55px;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 70px;
-}
-
-.help__list_1 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 31px;
-}
-.help__list_2 {
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% - 84px*2);
-    margin-top: 25px;
-    margin-bottom: 31px;
+    margin-bottom: 102px;
+    @include media-tablet {
+        column-gap: 60px;
+        row-gap: 57px;
+        margin-bottom: 100px;
+    }
 }
 
 .help__item {
     text-align: center;
+    @include media-tablet {
+        width: 170px;
+    }
 }

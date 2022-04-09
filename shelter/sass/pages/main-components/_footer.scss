@@ -6,6 +6,13 @@
     display: flex;
     justify-content: space-between;
     padding: 40px 20px 0 20px;
+    @include media-laptop {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include media-tablet {
+        padding: 15px 20px 0 20px;
+    }
 }
 
 .footer__content {
@@ -13,6 +20,12 @@
     max-width: 740px;
     justify-content: space-between;
     width: 100%;
+    @include media-laptop {
+        margin-bottom: 65px;
+    }
+    @include media-tablet {
+        max-width: 640px;
+    }
 }
 
 .footer__contacts, .footer__lications {
@@ -72,6 +85,9 @@
 
 .footer_puppy {
     margin-left: 25px;
+    @include media-tablet {
+        margin-left: 0;
+    }
 }
 
 .footer__headling {
