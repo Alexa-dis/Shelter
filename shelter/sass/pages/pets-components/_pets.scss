@@ -1,6 +1,15 @@
 .our-pets__pets {
     background-color: $color-light-l;
     padding: 80px 0 100px 0;
+    @include media-laptop {
+        padding: 80px 0 80px 0;
+    }
+}
+
+.pets_pets_headling {
+    @include media-laptop {
+        margin-bottom: 30px;
+    }
 }
 
 .pet-cards_container {
@@ -8,6 +17,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 40px;
     row-gap: 30px;
+    @include media-laptop {
+        grid-template-columns: 1fr 1fr ;
+        margin: 0 64px 0 64px;
+    }
 }
 
 .pet-cards__navigation {
@@ -16,4 +29,7 @@
     justify-content: space-between;
     margin: 0 auto;
     margin-top: 60px;
+    @include media-laptop {
+        margin-top: 40px;
+    }
 }

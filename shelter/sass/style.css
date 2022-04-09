@@ -334,6 +334,11 @@ h5 {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
+@media (max-width: 768px) {
+  .card {
+    max-width: 270px;
+  }
+}
 
 @media (max-width: 1024px) {
   .card3 {
@@ -642,12 +647,29 @@ h5 {
   background-color: #F6F6F6;
   padding: 80px 0 100px 0;
 }
+@media (max-width: 1024px) {
+  .our-pets__pets {
+    padding: 80px 0 80px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pets_pets_headling {
+    margin-bottom: 30px;
+  }
+}
 
 .pet-cards_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .pet-cards_container {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 64px 0 64px;
+  }
 }
 
 .pet-cards__navigation {
@@ -656,6 +678,11 @@ h5 {
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 60px;
+}
+@media (max-width: 1024px) {
+  .pet-cards__navigation {
+    margin-top: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

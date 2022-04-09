@@ -43,7 +43,9 @@
         background-color: $color-primary-light;
         border: 2px solid $color-primary-light;
     }
-
+    @include media-tablet {
+        max-width: 270px;
+    }
 }
 
 .card3 {
