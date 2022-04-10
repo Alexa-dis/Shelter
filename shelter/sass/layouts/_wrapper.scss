@@ -8,4 +8,8 @@
     @include media-tablet {
         max-width: $tablet-width;
     }
+    @include media-mobile-small {
+        max-width: $mobile-small-width;
+        padding: 0 1 0px;
+    }
 }

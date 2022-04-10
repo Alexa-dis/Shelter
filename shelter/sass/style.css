@@ -13,6 +13,12 @@
     max-width: 768px;
   }
 }
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+    padding: 0 1 0px;
+  }
+}
 
 @font-face {
   font-family: "Arial";
@@ -49,6 +55,11 @@ h2 {
   font-size: 44px;
   line-height: 130%;
   color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  h2 {
+    line-height: 125%;
+  }
 }
 
 h3 {
@@ -209,7 +220,7 @@ h5 {
 }
 @media (max-width: 1024px) {
   .start__img__wrapper {
-    margin-top: 113px;
+    margin-top: 116px;
     margin-left: 15px;
     width: 569px;
     height: 593px;
@@ -244,14 +255,31 @@ h5 {
   align-items: stretch;
 }
 
+.header__navigation {
+  display: flex;
+  max-width: 443px;
+  flex-grow: 1;
+}
+@media (max-width: 1024px) {
+  .header__navigation {
+    max-width: 443px;
+  }
+}
+
 .navigation {
   display: flex;
-  max-width: 480px;
   list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .navigation {
+    margin-left: 20px;
+  }
 }
 
 .navigation_link {
-  margin-left: 36px;
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
@@ -361,6 +389,7 @@ h5 {
 
 .about__section__text {
   max-width: 430px;
+  margin-right: 10px;
 }
 
 .about__spacer {
@@ -380,7 +409,7 @@ h5 {
 }
 
 .about-pets__img {
-  margin-right: 40px;
+  margin-left: 10px;
 }
 @media (max-width: 1024px) {
   .about-pets__img {
@@ -609,7 +638,6 @@ h5 {
 }
 
 .pets-navigation_link {
-  margin-left: 35px;
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
@@ -668,7 +696,7 @@ h5 {
 @media (max-width: 1024px) {
   .pet-cards_container {
     grid-template-columns: 1fr 1fr;
-    margin: 0 64px 0 64px;
+    margin: 0 9%;
   }
 }
 

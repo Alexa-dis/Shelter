@@ -9,15 +9,28 @@
   justify-content: space-between;
   align-items: stretch;
 }
+.header__navigation {
+  display: flex;
+  max-width: 443px;
+  flex-grow: 1;
+  @include media-laptop {
+    max-width: 443px;
+  }
+}
 
 .navigation {
   display: flex;
-  max-width: 480px;
   list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+  @include media-laptop {
+    margin-left: 20px;
+  }
 }
 
 .navigation_link {
-  margin-left: 36px;
+  //margin-left: 36px;
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;

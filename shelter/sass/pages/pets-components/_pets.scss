@@ -19,7 +19,7 @@
     row-gap: 30px;
     @include media-laptop {
         grid-template-columns: 1fr 1fr ;
-        margin: 0 64px 0 64px;
+        margin: 0 9%;
     }
 }
 
