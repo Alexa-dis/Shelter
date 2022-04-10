@@ -528,7 +528,7 @@ h5 {
 }
 
 .main__section {
-  background: top/cover no-repeat url(/assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .start__wrapper {
@@ -712,6 +712,7 @@ h5 {
 }
 .card:hover {
   background-color: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .card:hover .button_bordered {
   background-color: #FDDCC4;
@@ -878,7 +879,7 @@ h5 {
 }
 
 .footer {
-  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .footer_wrapper {
