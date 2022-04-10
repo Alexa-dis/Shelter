@@ -500,13 +500,13 @@ h5 {
 }
 
 .slider__arrow_left {
-  background-image: url(/assets/icons/Arrow_left.svg);
+  background-image: url(../../assets/icons/Arrow_left.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .slider__arrow_right {
-  background-image: url(/assets/icons/Arrow_right.svg);
+  background-image: url(../../assets/icons/Arrow_right.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -861,7 +861,7 @@ h5 {
   display: inline-block;
   width: 30px;
   height: 23px;
-  background-image: url(/assets/icons/credit-card.svg);
+  background-image: url(../../assets/icons/credit-card.svg);
   margin-left: 15px;
 }
 
@@ -922,7 +922,7 @@ h5 {
   width: 40px;
   height: 32px;
   display: inline-block;
-  background-image: url(/assets/icons/icon-email.svg);
+  background-image: url(../../assets/icons/icon-email.svg);
   margin: 17px 20px 0 0;
 }
 
@@ -937,7 +937,7 @@ h5 {
   width: 40px;
   height: 32px;
   display: inline-block;
-  background-image: url(/assets/icons/icon-phone.svg);
+  background-image: url(../../assets/icons/icon-phone.svg);
   margin: 18px 20px 0 0;
 }
 
@@ -952,7 +952,7 @@ h5 {
   width: 22px;
   height: 32px;
   display: inline-block;
-  background-image: url(/assets/icons/icon-marker.svg);
+  background-image: url(../../assets/icons/icon-marker.svg);
   margin: 16px 0 0 0;
 }
 
