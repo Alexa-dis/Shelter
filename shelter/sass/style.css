@@ -484,6 +484,7 @@ h5 {
   border: 2px solid #CDCDCD;
   background-color: #F6F6F6;
   color: #CDCDCD;
+  cursor: default;
 }
 .button__circle__bordered__inactive:hover {
   border: 2px solid #CDCDCD;
@@ -492,9 +493,20 @@ h5 {
 
 .button__circle__bordered {
   border: 2px solid #F1CDB3;
+  background-color: #F6F6F6;
 }
 
 .button__circle__colored {
+  background-color: #F1CDB3;
+  border: 2px solid #F1CDB3;
+}
+
+.button__circle__colored {
+  background-color: #F1CDB3;
+  border: 2px solid #F1CDB3;
+  cursor: default;
+}
+.button__circle__colored:hover {
   background-color: #F1CDB3;
   border: 2px solid #F1CDB3;
 }
