@@ -1,0 +1,25 @@
+.help__heading {
+    margin-top: 80px;
+}
+
+.help__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 120px;
+    row-gap: 55px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 102px;
+    @include media-tablet {
+        column-gap: 60px;
+        row-gap: 57px;
+        margin-bottom: 100px;
+    }
+}
+
+.help__item {
+    text-align: center;
+    @include media-tablet {
+        width: 170px;
+    }
+}

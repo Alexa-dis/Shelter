@@ -1,0 +1,22 @@
+
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "layouts/wrapper";
+
+//Base
+@import "base/fonts";
+@import "base/base";
+@import "base/buttons";
+
+//Components main
+@import "pages/main-components/main";
+@import "pages/main-components/header";
+@import "pages/main-components/pets";
+@import "pages/main-components/about";
+@import "pages/main-components/help";
+@import "pages/main-components/donation";
+@import "pages/main-components/footer";
+
+//Components main
+@import "pages/pets-components/header";
+@import "pages/pets-components/pets";

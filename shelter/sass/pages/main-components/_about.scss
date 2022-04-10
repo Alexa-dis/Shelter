@@ -1,0 +1,38 @@
+.about__section__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 165px 100px;
+    @include media-laptop {
+        flex-direction: column-reverse;
+        padding: 80px 135px 100px;
+    }
+}
+
+.about__section__text {
+    max-width: 430px;
+    margin-right: 10px;
+}
+
+.about__spacer {
+    margin-bottom: 25px;
+}
+
+.about__subheading {
+    font-family: 'Arial', serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-xl;
+}
+
+.pet__name {
+    margin-bottom: 30px;
+}
+
+.about-pets__img {
+    margin-left:10px;
+    @include media-laptop {
+        margin: 80px 0 0 0;
+    }
+}
