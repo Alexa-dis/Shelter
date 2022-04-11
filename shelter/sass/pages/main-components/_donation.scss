@@ -49,6 +49,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer; 
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        background-color: $color-primary-light;
+    }
 }
 
 .credit_card__number {

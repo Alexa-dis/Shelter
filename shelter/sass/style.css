@@ -858,6 +858,12 @@ h5 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.credit_card:hover {
+  transition: 0.3s;
+  background-color: #FDDCC4;
 }
 
 .credit_card__number {
@@ -879,7 +885,7 @@ h5 {
 }
 
 .footer {
-  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
 .footer_wrapper {
@@ -916,7 +922,8 @@ h5 {
   }
 }
 
-.footer__contacts, .footer__lications {
+.footer__contacts,
+.footer__lications {
   display: flex;
   flex-direction: column;
   max-width: 302px;
