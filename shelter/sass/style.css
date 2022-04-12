@@ -943,6 +943,10 @@ h5 {
   margin-top: 16px;
 }
 
+.phone_number, .email_text {
+  color: #F1CDB3;
+}
+
 .mail-to {
   margin-top: 20px;
   display: flex;
@@ -990,6 +994,7 @@ h5 {
 
 .location_text {
   margin-left: 20px;
+  color: #F1CDB3;
 }
 
 .footer_puppy {
