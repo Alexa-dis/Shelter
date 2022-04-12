@@ -418,6 +418,7 @@ h4 {
   line-height: 115%;
   letter-spacing: 0.06em;
   margin: 24px 0 0;
+  color: #545454;
 }
 
 h5 {
@@ -678,6 +679,7 @@ h5 {
 .headling_centered {
   text-align: center;
   margin-bottom: 60px;
+  color: #545454;
 }
 
 .pets__slider {
@@ -748,6 +750,10 @@ h5 {
 .about__section__text {
   max-width: 430px;
   margin-right: 10px;
+}
+
+.about__headling {
+  color: #545454;
 }
 
 .about__spacer {
@@ -826,6 +832,10 @@ h5 {
 
 .donation__section__text {
   max-width: 380px;
+}
+
+.donation__headling {
+  color: #545454;
 }
 
 .donation__subheading {
