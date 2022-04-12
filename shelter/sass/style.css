@@ -528,7 +528,7 @@ h5 {
 }
 
 .main__section {
-  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: top/cover no-repeat url(../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .start__wrapper {
@@ -588,6 +588,12 @@ h5 {
     height: 593px;
   }
 }
+@media (max-width: 1024px) {
+  .start__img {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
 
 @media (max-width: 1024px) {
   .start_button {
@@ -615,11 +621,6 @@ h5 {
   max-width: 443px;
   flex-grow: 1;
 }
-@media (max-width: 1024px) {
-  .header__navigation {
-    max-width: 443px;
-  }
-}
 
 .navigation {
   display: flex;
@@ -627,11 +628,6 @@ h5 {
   width: 100%;
   justify-content: space-between;
   padding: 0;
-}
-@media (max-width: 1024px) {
-  .navigation {
-    margin-left: 20px;
-  }
 }
 
 .navigation_link {
@@ -651,6 +647,12 @@ h5 {
 .active {
   color: #FAFAFA;
   border-bottom: solid 3px #F1CDB3;
+}
+
+@media (max-width: 768px) {
+  .logo__wrapper {
+    margin-right: 10px;
+  }
 }
 
 .logo__titile {
@@ -885,7 +887,7 @@ h5 {
 }
 
 .footer {
-  background: top/cover no-repeat url(../../../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  background: top/cover no-repeat url(../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
 .footer_wrapper {
