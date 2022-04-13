@@ -31,6 +31,7 @@
 }
 
 .button__circle {
+    flex-shrink: 0;
     cursor: pointer;
     box-sizing: border-box;
     border-radius: 100px;
@@ -89,8 +90,4 @@
     background-image: url(../assets/icons/Arrow_right.svg);
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.pets_clider__buttons{
-    margin-top: 192px;
 }

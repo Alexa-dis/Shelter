@@ -13,6 +13,10 @@
 .pets__slider {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @include media-laptop {
+    margin: 0 0 60px 0;
+  }
 }
 
 .pets__cards {
@@ -23,11 +27,15 @@
   margin: 0 10px 60px 10px;
   @include media-laptop {
     justify-content: space-evenly;
-    margin: 0 0 60px 0;
+    margin: 0 0 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 40px;
+    max-width: 580px;
   }
   @include media-tablet {
-    justify-content: space-between;
-    max-width: 580px;
+    
   }
 }
 
@@ -45,13 +53,18 @@
     background-color: $color-primary-light;
     border: 2px solid $color-primary-light;
   }
-  @include media-tablet {
+  @include media-laptop {
     max-width: 270px;
   }
 }
 
 .card3 {
   @include media-laptop {
+    display: none;
+  }
+}
+.card2 {
+  @include media-tablet {
     display: none;
   }
 }

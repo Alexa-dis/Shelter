@@ -1,11 +1,18 @@
 html {
+    position: relative;
     font-size: 10px;
     scroll-behavior: smooth;
+    
 }
 
 body {
     font-size: 1.6rem;
     font-family: 'Georgia', serif;
+    overflow-x: hidden;
+}
+
+body.lock {
+    overflow: hidden;
 }
 
 h1 {

@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 102px;
-    @include media-tablet {
+    @include media-laptop {
         column-gap: 60px;
         row-gap: 57px;
         margin-bottom: 100px;
@@ -19,7 +19,7 @@
 
 .help__item {
     text-align: center;
-    @include media-tablet {
+    @include media-laptop {
         width: 170px;
     }
 }

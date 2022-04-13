@@ -351,9 +351,9 @@ p {
     max-width: 1024px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .wrapper {
-    max-width: 768px;
+    max-width: 767px;
   }
 }
 @media (max-width: 320px) {
@@ -376,6 +376,7 @@ p {
   src: url(/assets/fonts/georgia/Georgia\ Regular\ font.ttf);
 }
 html {
+  position: relative;
   font-size: 10px;
   scroll-behavior: smooth;
 }
@@ -383,6 +384,11 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Georgia", serif;
+  overflow-x: hidden;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 h1 {
@@ -390,16 +396,16 @@ h1 {
   font-size: 32px;
   line-height: 110%;
   letter-spacing: 0.06em;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 h2 {
   font-weight: 400;
   font-size: 44px;
   line-height: 130%;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h2 {
     line-height: 125%;
   }
@@ -437,19 +443,19 @@ h5 {
   color: #292929;
   padding: 13px 44px;
   border-radius: 100px;
-  border: 2px solid #F1CDB3;
+  border: 2px solid #f1cdb3;
   cursor: pointer;
   background: transparent;
   transition: 0.3s;
 }
 
 .button_colored {
-  background: #F1CDB3;
+  background: #f1cdb3;
 }
 .button_colored:hover {
   transition: 0.3s;
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .button_bordered {
@@ -457,11 +463,12 @@ h5 {
 }
 .button_bordered:hover {
   transition: 0.3s;
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .button__circle {
+  flex-shrink: 0;
   cursor: pointer;
   box-sizing: border-box;
   border-radius: 100px;
@@ -477,39 +484,39 @@ h5 {
 }
 .button__circle:hover {
   transition: 0.3s;
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
 
 .button__circle__bordered__inactive {
-  border: 2px solid #CDCDCD;
-  background-color: #F6F6F6;
-  color: #CDCDCD;
+  border: 2px solid #cdcdcd;
+  background-color: #f6f6f6;
+  color: #cdcdcd;
   cursor: default;
 }
 .button__circle__bordered__inactive:hover {
-  border: 2px solid #CDCDCD;
-  background-color: #F6F6F6;
+  border: 2px solid #cdcdcd;
+  background-color: #f6f6f6;
 }
 
 .button__circle__bordered {
-  border: 2px solid #F1CDB3;
-  background-color: #F6F6F6;
+  border: 2px solid #f1cdb3;
+  background-color: #f6f6f6;
 }
 
 .button__circle__colored {
-  background-color: #F1CDB3;
-  border: 2px solid #F1CDB3;
+  background-color: #f1cdb3;
+  border: 2px solid #f1cdb3;
 }
 
 .button__circle__colored {
-  background-color: #F1CDB3;
-  border: 2px solid #F1CDB3;
+  background-color: #f1cdb3;
+  border: 2px solid #f1cdb3;
   cursor: default;
 }
 .button__circle__colored:hover {
-  background-color: #F1CDB3;
-  border: 2px solid #F1CDB3;
+  background-color: #f1cdb3;
+  border: 2px solid #f1cdb3;
 }
 
 .slider__arrow_left {
@@ -524,12 +531,10 @@ h5 {
   background-position: center;
 }
 
-.pets_clider__buttons {
-  margin-top: 192px;
-}
-
 .main__section {
   background: top/cover no-repeat url(../assets/images/start-screen-gradient-background.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  overflow: hidden;
+  position: relative;
 }
 
 .start__wrapper {
@@ -541,13 +546,7 @@ h5 {
     max-width: 1024px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20%;
-  }
-}
-@media (max-width: 768px) {
-  .start__wrapper {
-    margin-left: 16%;
+    align-items: flex-end;
   }
 }
 
@@ -556,7 +555,8 @@ h5 {
 }
 @media (max-width: 1024px) {
   .start__screen__content {
-    margin-top: 60px;
+    margin-top: 63px;
+    width: 82.5%;
   }
 }
 
@@ -565,7 +565,7 @@ h5 {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  color: #CDCDCD;
+  color: #cdcdcd;
   padding: 42px 0 57px 0;
   max-width: 460px;
 }
@@ -573,32 +573,34 @@ h5 {
 .start__img__wrapper {
   width: 698px;
   height: 728px;
+  position: relative;
 }
 @media (max-width: 1024px) {
   .start__img__wrapper {
     margin-top: 116px;
-    margin-left: 15px;
     width: 569px;
     height: 593px;
+  }
+}
+@media (max-width: 767px) {
+  .start__img__wrapper {
+    width: 340.63px;
+    height: 355px;
   }
 }
 
-@media (max-width: 1024px) {
-  .start__img {
-    width: 569px;
-    height: 593px;
-  }
-}
-@media (max-width: 1024px) {
-  .start__img {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+.start__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1024px) {
   .start_button {
-    margin-left: 27.5%;
+    margin-left: 21%;
   }
 }
 
@@ -622,6 +624,23 @@ h5 {
   max-width: 443px;
   flex-grow: 1;
 }
+@media (max-width: 767px) {
+  .header__navigation {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 3;
+    width: 320px;
+    height: 100vh;
+    top: 0;
+    right: -320px;
+    transition: 0.5s;
+  }
+}
+
+.header__navigation.open {
+  right: 0px;
+  transition: 0.5s;
+}
 
 .navigation {
   display: flex;
@@ -630,29 +649,52 @@ h5 {
   justify-content: space-between;
   padding: 0;
 }
+@media (max-width: 767px) {
+  .navigation {
+    margin: 0;
+    padding-top: 248px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #292929;
+  }
+}
 
 .navigation_link {
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  color: #CDCDCD;
+  color: #cdcdcd;
   padding-bottom: 4px;
   transition: 0.3s;
 }
 .navigation_link:hover {
   transition: 0.3s;
-  color: #FAFAFA;
+  color: #fafafa;
+}
+@media (max-width: 767px) {
+  .navigation_link {
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 }
 
 .active {
-  color: #FAFAFA;
-  border-bottom: solid 3px #F1CDB3;
+  color: #fafafa;
+  border-bottom: solid 3px #f1cdb3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo__wrapper {
     margin-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .logo__wrapper {
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -661,7 +703,7 @@ h5 {
 }
 
 .logo__subtitile {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Arial", serif;
   font-weight: 400;
   font-size: 13px;
@@ -670,8 +712,52 @@ h5 {
   padding-left: 4px;
 }
 
+.burger {
+  display: none;
+}
+@media (max-width: 767px) {
+  .burger {
+    position: absolute;
+    top: 49px;
+    right: 53px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 22px;
+    transition: 0.5s;
+  }
+}
+
+.burger.open {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.line {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: #f1cdb3;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.shadow.open {
+  display: block;
+}
+
 .pets__section {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 80px 0 100px 0;
   text-align: center;
 }
@@ -685,6 +771,12 @@ h5 {
 .pets__slider {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .pets__slider {
+    margin: 0 0 60px 0;
+  }
 }
 
 .pets__cards {
@@ -697,32 +789,30 @@ h5 {
 @media (max-width: 1024px) {
   .pets__cards {
     justify-content: space-evenly;
-    margin: 0 0 60px 0;
-  }
-}
-@media (max-width: 768px) {
-  .pets__cards {
-    justify-content: space-between;
+    margin: 0 0 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 40px;
     max-width: 580px;
   }
 }
-
 .card {
   cursor: pointer;
   text-align: center;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 9px;
   transition: 0.3s;
 }
 .card:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .card:hover .button_bordered {
-  background-color: #FDDCC4;
-  border: 2px solid #FDDCC4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card {
     max-width: 270px;
   }
@@ -730,6 +820,12 @@ h5 {
 
 @media (max-width: 1024px) {
   .card3 {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .card2 {
     display: none;
   }
 }
@@ -765,7 +861,7 @@ h5 {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  color: #4C4C4C;
+  color: #4c4c4c;
 }
 
 .pet__name {
@@ -794,7 +890,7 @@ h5 {
   align-items: center;
   margin-bottom: 102px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .help__list {
     column-gap: 60px;
     row-gap: 57px;
@@ -805,14 +901,14 @@ h5 {
 .help__item {
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .help__item {
     width: 170px;
   }
 }
 
 .donation__section {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 .donation__content {
@@ -854,7 +950,7 @@ h5 {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  color: #B2B2B2;
+  color: #b2b2b2;
 }
 @media (max-width: 1024px) {
   .legal_inf {
@@ -866,7 +962,7 @@ h5 {
   width: 349px;
   height: 43px;
   border-radius: 9px;
-  background-color: #F1CDB3;
+  background-color: #f1cdb3;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -875,7 +971,7 @@ h5 {
 }
 .credit_card:hover {
   transition: 0.3s;
-  background-color: #FDDCC4;
+  background-color: #fddcc4;
 }
 
 .credit_card__number {
@@ -911,7 +1007,7 @@ h5 {
     align-items: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer_wrapper {
     padding: 15px 20px 0 20px;
   }
@@ -926,14 +1022,9 @@ h5 {
 @media (max-width: 1024px) {
   .footer__content {
     margin-bottom: 65px;
-  }
-}
-@media (max-width: 768px) {
-  .footer__content {
     max-width: 640px;
   }
 }
-
 .footer__contacts,
 .footer__lications {
   display: flex;
@@ -944,14 +1035,14 @@ h5 {
 }
 
 .phone_number, .email_text {
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .mail-to {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .email_icon {
@@ -966,7 +1057,7 @@ h5 {
   margin-top: 22px;
   display: flex;
   align-items: center;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .phone_icon {
@@ -978,7 +1069,7 @@ h5 {
 }
 
 .location-to {
-  color: #F1CDB3;
+  color: #f1cdb3;
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -994,27 +1085,27 @@ h5 {
 
 .location_text {
   margin-left: 20px;
-  color: #F1CDB3;
+  color: #f1cdb3;
 }
 
 .footer_puppy {
   margin-left: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .footer_puppy {
     margin-left: 0;
   }
 }
 
 .footer__headling {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .pets-header {
   padding: 30px 0;
   position: sticky;
   top: 0;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .pets-navigation_link {
@@ -1033,7 +1124,7 @@ h5 {
 
 .pets-active {
   color: #292929;
-  border-bottom: solid 3px #F1CDB3;
+  border-bottom: solid 3px #f1cdb3;
 }
 
 .pets-logo__titile {
@@ -1052,7 +1143,7 @@ h5 {
 }
 
 .our-pets__pets {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 80px 0 100px 0;
 }
 @media (max-width: 1024px) {

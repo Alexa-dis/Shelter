@@ -24,9 +24,10 @@
   width: 100%;
   @include media-laptop {
     margin-bottom: 65px;
+    max-width: 640px;
   }
   @include media-tablet {
-    max-width: 640px;
+    
   }
 }
 
@@ -91,7 +92,7 @@
 
 .footer_puppy {
   margin-left: 25px;
-  @include media-tablet {
+  @include media-laptop {
     margin-left: 0;
   }
 }
