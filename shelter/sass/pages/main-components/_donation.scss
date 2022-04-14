@@ -13,6 +13,9 @@
     @include media-laptop {
         flex-direction: column-reverse;
     }
+    @include media-tablet {
+        padding: 42px 0;
+    }
 }
 
 .donation__section__text {
@@ -32,6 +35,11 @@
     letter-spacing: 0.06em;
     color: $color-dark-l;
     padding: 20px 0;
+    @include media-tablet {
+        letter-spacing: 0;
+        text-align: center;
+        padding: 24px 0 22px 0 ;
+    }
 }
 
 .legal_inf {
@@ -42,6 +50,12 @@
     color: $color-dark-m;
     @include media-laptop {
         margin-bottom: 60px;
+    }
+    @include media-tablet {
+        max-width: 280px;
+        text-align: justify;
+        margin: calc(50% - 280px/2);
+        margin-bottom: 42px;
     }
 }
 
@@ -59,6 +73,9 @@
         transition: 0.3s;
         background-color: $color-primary-light;
     }
+    @include media-tablet {
+        width: 281px;
+    }
 }
 
 .credit_card__number {
@@ -69,6 +86,10 @@
     letter-spacing: 0.06em;
     color: $color-dark-l;
     margin-left: 15px;
+    @include media-tablet {
+        font-size: 15px;
+        line-height: 110%;
+    }
 }
 
 .credit_card__icon {
@@ -77,4 +98,11 @@
     height: 23px;
     background-image: url(../assets/icons/credit-card.svg);
     margin-left: 15px;
+}
+
+.donation_img {
+    @include media-tablet {
+        width: 260px;
+        height: 135.2px;
+    }
 }

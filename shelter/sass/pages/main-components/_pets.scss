@@ -2,12 +2,18 @@
   background-color: $color-light-l;
   padding: 80px 0 100px 0;
   text-align: center;
+  @include media-tablet {
+    padding: 42px 0;
+  }
 }
 
 .headling_centered {
   text-align: center;
   margin-bottom: 60px;
   color: $color-dark-l;
+  @include media-tablet {
+    margin-bottom: 42px;
+  }
 }
 
 .pets__slider {
@@ -16,6 +22,13 @@
   align-items: center;
   @include media-laptop {
     margin: 0 0 60px 0;
+  }
+  @include media-tablet {
+    margin: 0 auto 42px;
+    max-width: 270px;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 72px;
   }
 }
 
@@ -35,7 +48,7 @@
     max-width: 580px;
   }
   @include media-tablet {
-    
+    order:-1;
   }
 }
 
@@ -66,5 +79,11 @@
 .card2 {
   @include media-tablet {
     display: none;
+  }
+}
+
+.pet__name {
+  @include media-tablet {
+    font-size: 20px;
   }
 }

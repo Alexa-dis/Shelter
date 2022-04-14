@@ -1,7 +1,6 @@
 .footer {
-  background: top / cover no-repeat
-      url(../assets/images/start-screen-gradient-background.png),
-    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  background: top repeat url(../../../assets/images/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .footer_wrapper {
@@ -9,11 +8,12 @@
   justify-content: space-between;
   padding: 40px 20px 0 20px;
   @include media-laptop {
+    padding: 15px 20px 0 20px;
     flex-direction: column;
     align-items: center;
   }
   @include media-tablet {
-    padding: 15px 20px 0 20px;
+    padding: 30px 10px 0;
   }
 }
 
@@ -27,20 +27,44 @@
     max-width: 640px;
   }
   @include media-tablet {
-    
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 45px;
   }
 }
 
-.footer__contacts,
-.footer__lications {
+.footer__contacts {
   display: flex;
   flex-direction: column;
   max-width: 302px;
   width: 100%;
   margin-top: 16px;
+  @include media-tablet {
+    align-items: center;
+    margin: 0 0 42px 0;
+  }
 }
+
+.footer__locations {
+  display: flex;
+  flex-direction: column;
+  max-width: 302px;
+  width: 100%;
+  margin-top: 16px;
+  @include media-tablet {
+    align-items: flex-start;
+    margin: 0;
+  }
+}
+
 .phone_number, .email_text {
   color: $color-primary;
+  @include media-tablet {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+  }
 }
 .mail-to {
   margin-top: 20px;
@@ -69,12 +93,20 @@
   background-image: url(../assets/icons/icon-phone.svg);
   margin: 18px 20px 0 0;
 }
-
+.location {
+  @include media-tablet {
+    display: flex;
+    margin-top: 16.5px;
+  }
+}
 .location-to {
   color: $color-primary;
   display: flex;
   align-items: center;
   margin-top: 10px;
+  @include media-tablet {
+    margin: 0;
+  }
 }
 
 .location_icon {
@@ -88,6 +120,12 @@
 .location_text {
   margin-left: 20px;
   color: $color-primary;
+  @include media-tablet {
+    margin-left: 20px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+  }
 }
 
 .footer_puppy {
@@ -95,8 +133,13 @@
   @include media-laptop {
     margin-left: 0;
   }
+  @include media-tablet {
+    width: 260px;
+    height: 269px;
+  }
 }
 
 .footer__headling {
   color: $color-light-xl;
+  max-width: 288px;
 }

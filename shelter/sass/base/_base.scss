@@ -28,8 +28,14 @@ h2 {
     font-size: 44px;
     line-height: 130%;
     color: $color-light-xl;
-    @include media-tablet {
+    @include media-laptop {
         line-height: 125%;
+    }
+    @include media-tablet {
+        font-size: 25px;
+        line-height: 130%;
+        text-align: center;
+        letter-spacing: 0.06em;
     }
 }
 
@@ -38,6 +44,10 @@ h3 {
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em; 
+    @include media-tablet {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
 h4 {
@@ -47,12 +57,7 @@ h4 {
     letter-spacing: 0.06em; 
     margin: 24px 0 0;
     color: $color-dark-l;
-}
-
-h5 {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 110%;
-    letter-spacing: 0.06em;
-    color: $color-dark-l;
+    @include media-tablet {
+        font-size: 15px;
+    }
 }

@@ -7,11 +7,18 @@
         flex-direction: column-reverse;
         padding: 80px 135px 100px;
     }
+    @include media-tablet {
+        padding: 42px 16px;
+    }
 }
 
 .about__section__text {
     max-width: 430px;
     margin-right: 10px;
+    @include media-tablet {
+        max-width: 290px;
+        margin: 0;
+    }
 }
 
 .about__headling {
@@ -20,6 +27,9 @@
 
 .about__spacer {
     margin-bottom: 25px;
+    @include media-tablet {
+        margin-bottom: 24px;
+    }
 }
 
 .about__subheading {
@@ -28,6 +38,10 @@
     font-size: 15px;
     line-height: 160%;
     color: $color-dark-xl;
+    @include media-tablet {
+        text-align: justify;
+        width: 270px;
+    }
 }
 
 .pet__name {
@@ -38,5 +52,10 @@
     margin-left:10px;
     @include media-laptop {
         margin: 80px 0 0 0;
+    }
+    @include media-tablet {
+        margin: 42px 0 0 0;
+        width: 260px;
+        height: 353.6px;
     }
 }

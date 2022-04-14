@@ -1,7 +1,9 @@
 .header {
+  position: relative;
   padding: 60px 0;
   @include media-laptop {
     padding: 30px 0 0 0;
+    height: 60px;
   }
 }
 .header__wrapper {
@@ -80,7 +82,15 @@
   @include media-tablet {
     position: relative;
     z-index: 3;
+    transition: 0.5s;
   }
+}
+
+.logo__wrapper.open{
+  position: absolute;
+  z-index: 10;
+  right: 116px;
+  transition: 0.5s;
 }
 
 .logo__titile {
@@ -133,8 +143,10 @@
   width: 100%;
   height: 100%;
   display: none;
+  transition: 0.5s;
 }
 
 .shadow.open {
   display: block;
+  transition: 0.5s;
 }

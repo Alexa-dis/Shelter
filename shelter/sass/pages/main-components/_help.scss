@@ -1,5 +1,8 @@
 .help__heading {
     margin-top: 80px;
+    @include media-tablet {
+        margin-top: 42px;
+    }
 }
 
 .help__list {
@@ -15,11 +18,32 @@
         row-gap: 57px;
         margin-bottom: 100px;
     }
+    @include media-tablet {
+        column-gap: 30px;
+        row-gap: 28px;
+        margin-bottom: 42px;
+    }
 }
 
 .help__item {
     text-align: center;
     @include media-laptop {
         width: 170px;
+    }
+    @include media-tablet {
+        width: 130px;
+    }
+}
+
+.help__item__img {
+    @include media-tablet {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.help__item__text {
+    @include media-tablet {
+        margin-top: 17px;
     }
 }

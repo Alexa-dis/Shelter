@@ -1,5 +1,5 @@
 .main__section {
-    background: top / cover no-repeat url(../assets/images/start-screen-gradient-background.png),
+    background: top repeat url(../../../assets/images/noise_transparent@2x.png),
     radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
     overflow: hidden;
     position: relative;
@@ -19,8 +19,11 @@
 .start__screen__content{
     margin-top: 162px;
     @include media-laptop {
-        margin-top: 63px;
+        margin-top: 60px;
         width: 82.5%;
+    }
+    @include media-tablet {
+        width: 100%;
     }
 }
 
@@ -32,6 +35,11 @@
     color: $color-dark-s;
     padding: 42px 0 57px 0;
     max-width: 460px;
+    @include media-tablet {
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 .start__img__wrapper {
@@ -46,6 +54,10 @@
     @include media-tablet {
         width: 340.63px;
         height: 355px;   
+    }
+    @include media-mobile-big {
+        width: 260px;
+        height: 271.77px;
     }
 }
 
@@ -62,5 +74,8 @@
 .start_button {
     @include media-laptop {
         margin-left: 21%;
+    }
+    @include media-tablet {
+        margin-left: calc(50% - 207px/2 - 0.5px);;
     }
 }
