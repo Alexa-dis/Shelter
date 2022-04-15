@@ -1,8 +1,17 @@
+.main_pets_wrapper {
+    //position: relative;
+    overflow-x: hidden;
+}
 .pets-header {
     padding: 30px 0;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top:0;
+    z-index: 3;
     background-color: $color-light-xl;
+    @include media-laptop {
+        
+    }
 }
 
 .pets-navigation_link{
@@ -17,6 +26,11 @@
     &:hover {
         transition: 0.3s;
         color: $color-dark-3xl ;
+    }
+    @include media-tablet {
+        display: inline-block;
+        font-size: 32px;
+        margin-bottom: 40px;
     }
 }
 
@@ -39,3 +53,69 @@
     letter-spacing: 0.1em;
     padding-left: 4px;
 }
+.pets-burger {
+    display: none;
+    @include media-tablet {
+      position: absolute;
+      top: 49px;
+      right: 53px;
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 30px;
+      height: 22px;
+      transition: 0.5s;
+    }
+  }
+
+.pets-burger.open {
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}
+
+.pets-burger .line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    }
+
+.pets-header__navigation {
+    display: flex;
+    max-width: 443px;
+    flex-grow: 1;
+    @include media-tablet {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 4;
+    width: 320px;
+    height: 100vh;
+    top:0;
+    right: -320px;
+    transition: 0.5s;
+    }
+}
+
+.pets-header__navigation.open {
+    right: 0px;
+    // overflow: visible;
+    transition: 0.5s;
+}
+
+.pets-navigation {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    @include media-tablet {
+      margin: 0;
+      padding-top: 248px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: $color-light-xl;
+    }
+  }

@@ -10,6 +10,9 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  @include media-laptop {
+    width: 100%;
+  }
 }
 .header__navigation {
   display: flex;
@@ -143,10 +146,18 @@
   width: 100%;
   height: 100%;
   display: none;
-  transition: 0.5s;
+  transition: 1s;
+  opacity: 0;
+  animation: ani 0.5s forwards;
 }
 
 .shadow.open {
   display: block;
-  transition: 0.5s;
+  transition: 1s;
+  visibility: visible;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

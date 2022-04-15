@@ -142,4 +142,7 @@
 .footer__headling {
   color: $color-light-xl;
   max-width: 288px;
+  @include media-tablet {
+    align-self: center;
+  }
 }

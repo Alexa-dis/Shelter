@@ -14,9 +14,10 @@
     align-items: center;
     margin-bottom: 102px;
     @include media-laptop {
+        max-width: 708px;
         column-gap: 60px;
         row-gap: 57px;
-        margin-bottom: 100px;
+        margin: 0 auto 100px;
     }
     @include media-tablet {
         column-gap: 30px;
