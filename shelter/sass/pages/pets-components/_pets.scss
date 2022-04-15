@@ -23,6 +23,9 @@ body.lock {
     @include media-laptop {
         padding: 200px 0 80px 0;
     }
+    @include media-tablet {
+        padding: 162px 0 45px 0;
+    }
 }
 
 .pets_pets_headling {
@@ -42,6 +45,7 @@ body.lock {
         grid-template-columns: 1fr 1fr ;
     }
     @include media-tablet {
+        padding-top: 15px;
         grid-template-columns: 1fr;
     }
 }

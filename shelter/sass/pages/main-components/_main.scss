@@ -14,6 +14,9 @@
         flex-direction: column;
         align-items: flex-end;
     }
+    @include media-tablet {
+        max-width: 300px;
+    }
 }
 
 .start__screen__content{
@@ -52,12 +55,8 @@
         height: 593px;
     }
     @include media-tablet {
-        width: 340.63px;
-        height: 355px;   
-    }
-    @include media-mobile-big {
         width: 260px;
-        height: 271.77px;
+        height: 271.77px;   
     }
 }
 

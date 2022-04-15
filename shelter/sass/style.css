@@ -348,7 +348,7 @@ p {
 @media (max-width: 767px) {
   .wrapper {
     max-width: 767px;
-    padding: 0 10px;
+    padding: 0;
   }
 }
 @media (max-width: 320px) {
@@ -568,6 +568,11 @@ h4 {
     align-items: flex-end;
   }
 }
+@media (max-width: 767px) {
+  .start__wrapper {
+    max-width: 300px;
+  }
+}
 
 .start__screen__content {
   margin-top: 162px;
@@ -615,12 +620,6 @@ h4 {
 }
 @media (max-width: 767px) {
   .start__img__wrapper {
-    width: 340.63px;
-    height: 355px;
-  }
-}
-@media (max-width: 375px) {
-  .start__img__wrapper {
     width: 260px;
     height: 271.77px;
   }
@@ -652,7 +651,13 @@ h4 {
 }
 @media (max-width: 1279px) {
   .header {
-    padding: 30px 0 0 0;
+    padding: 30px 30px 0 30px;
+    height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 0;
     height: 60px;
   }
 }
@@ -706,6 +711,7 @@ h4 {
     align-items: center;
     justify-content: flex-start;
     background-color: #292929;
+    height: 100vh;
   }
 }
 
@@ -735,6 +741,9 @@ h4 {
   border-bottom: solid 3px #f1cdb3;
 }
 
+.logo__wrapper {
+  animation: ani 0.5s forwards;
+}
 @media (max-width: 1279px) {
   .logo__wrapper {
     margin-right: 10px;
@@ -745,14 +754,12 @@ h4 {
     position: relative;
     z-index: 3;
     transition: 0.5s;
+    margin: 30px 0 0 10px;
   }
 }
 
 .logo__wrapper.open {
-  position: absolute;
-  z-index: 10;
-  right: 116px;
-  transition: 0.5s;
+  display: none;
 }
 
 .logo__titile {
@@ -804,8 +811,8 @@ h4 {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 3;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: none;
   transition: 1s;
   opacity: 0;
@@ -826,6 +833,18 @@ h4 {
     opacity: 1;
   }
 }
+.menu-logo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .menu-logo {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+}
+
 .pets__section {
   background-color: #f6f6f6;
   padding: 80px 0 100px 0;
@@ -833,7 +852,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .pets__section {
-    padding: 42px 0;
+    padding: 40px 0;
   }
 }
 
@@ -946,7 +965,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .about__section__content {
-    padding: 42px 16px;
+    padding: 44px 16px;
   }
 }
 
@@ -1036,6 +1055,8 @@ h4 {
 }
 @media (max-width: 767px) {
   .help__list {
+    justify-content: flex-start;
+    max-width: 290px;
     column-gap: 30px;
     row-gap: 28px;
     margin-bottom: 42px;
@@ -1365,6 +1386,8 @@ h4 {
 }
 @media (max-width: 767px) {
   .footer__headling {
+    display: inline-block;
+    width: 310px;
     align-self: center;
   }
 }
@@ -1381,6 +1404,13 @@ h4 {
   z-index: 3;
   background-color: #ffffff;
 }
+@media (max-width: 1279px) {
+  .pets-header {
+    padding: 0;
+    height: 120px;
+  }
+}
+
 .pets-navigation_link {
   font-family: "Arial", serif;
   font-weight: 400;
@@ -1430,7 +1460,7 @@ h4 {
     position: absolute;
     top: 49px;
     right: 53px;
-    z-index: 5;
+    z-index: 40;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1461,8 +1491,8 @@ h4 {
 @media (max-width: 767px) {
   .pets-header__navigation {
     overflow-x: hidden;
-    position: absolute;
-    z-index: 4;
+    position: fixed;
+    z-index: 6;
     width: 320px;
     height: 100vh;
     top: 0;
@@ -1482,6 +1512,7 @@ h4 {
   width: 100%;
   justify-content: space-between;
   padding: 0;
+  position: relative;
 }
 @media (max-width: 767px) {
   .pets-navigation {
@@ -1491,6 +1522,18 @@ h4 {
     align-items: center;
     justify-content: flex-start;
     background-color: #ffffff;
+  }
+}
+
+.pets-menu-logo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .pets-menu-logo {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 10px;
   }
 }
 
@@ -1523,6 +1566,11 @@ body.lock {
     padding: 200px 0 80px 0;
   }
 }
+@media (max-width: 767px) {
+  .our-pets__pets {
+    padding: 162px 0 45px 0;
+  }
+}
 
 @media (max-width: 1279px) {
   .pets_pets_headling {
@@ -1545,6 +1593,7 @@ body.lock {
 }
 @media (max-width: 767px) {
   .pet-cards_container {
+    padding-top: 15px;
     grid-template-columns: 1fr;
   }
 }

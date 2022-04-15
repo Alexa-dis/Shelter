@@ -143,6 +143,8 @@
   color: $color-light-xl;
   max-width: 288px;
   @include media-tablet {
+    display: inline-block;
+    width: 310px;
     align-self: center;
   }
 }
