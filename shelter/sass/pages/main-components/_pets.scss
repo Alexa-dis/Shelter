@@ -2,17 +2,35 @@
   background-color: $color-light-l;
   padding: 80px 0 100px 0;
   text-align: center;
+  @include media-tablet {
+    padding: 40px 0;
+  }
 }
 
 .headling_centered {
   text-align: center;
   margin-bottom: 60px;
   color: $color-dark-l;
+  @include media-tablet {
+    margin-bottom: 42px;
+  }
 }
 
 .pets__slider {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  @include media-laptop {
+    margin: 0 auto 60px ;
+    max-width: 708px;
+  }
+  @include media-tablet {
+    margin: 0 auto 42px;
+    max-width: 270px;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 72px;
+  }
 }
 
 .pets__cards {
@@ -23,11 +41,15 @@
   margin: 0 10px 60px 10px;
   @include media-laptop {
     justify-content: space-evenly;
-    margin: 0 0 60px 0;
+    margin: 0 0 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 40px;
+    max-width: 580px;
   }
   @include media-tablet {
-    justify-content: space-between;
-    max-width: 580px;
+    order:-1;
   }
 }
 
@@ -45,7 +67,7 @@
     background-color: $color-primary-light;
     border: 2px solid $color-primary-light;
   }
-  @include media-tablet {
+  @include media-laptop {
     max-width: 270px;
   }
 }
@@ -53,5 +75,16 @@
 .card3 {
   @include media-laptop {
     display: none;
+  }
+}
+.card2 {
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.pet__name {
+  @include media-tablet {
+    font-size: 20px;
   }
 }

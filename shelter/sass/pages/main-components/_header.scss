@@ -1,27 +1,61 @@
 .header {
+  position: relative;
   padding: 60px 0;
   @include media-laptop {
-    padding: 30px 0 0 0;
+    padding: 30px 30px 0 30px;
+    height: 60px;
+  }
+  @include media-tablet {
+    padding: 0;
+    height: 60px;
   }
 }
 .header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  @include media-laptop {
+    width: 100%;
+  }
 }
 .header__navigation {
   display: flex;
   max-width: 443px;
   flex-grow: 1;
+  @include media-tablet {
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 3;
+    width: 320px;
+    height: 100vh;
+    top:0;
+    right: -320px;
+    transition: 0.5s;
+  }
 }
 
+.header__navigation.open {
+  right: 0px;
+  // overflow: visible;
+  transition: 0.5s;
+}
 .navigation {
   display: flex;
   list-style: none;
   width: 100%;
   justify-content: space-between;
   padding: 0;
+  @include media-tablet {
+    margin: 0;
+    padding-top: 249px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $color-dark-3xl;
+  }
 }
+
+
 
 .navigation_link {
   //margin-left: 36px;
@@ -36,6 +70,12 @@
     transition: 0.3s;
     color: $color-light-s;
   }
+  @include media-tablet {
+    padding-bottom: 1px;
+    display: inline-block;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 }
 
 .active {
@@ -44,9 +84,20 @@
 }
 
 .logo__wrapper {
-  @include media-tablet {
+  animation: ani 0.5s forwards;
+  @include media-laptop {
     margin-right: 10px;
   }
+  @include media-tablet {
+    position: relative;
+    z-index: 3;
+    transition: 0.5s;
+    margin: 30px 0 0 10px;
+  }
+}
+
+.logo__wrapper.open{
+  display: none;
 }
 
 .logo__titile {
@@ -61,4 +112,66 @@
   line-height: 15px;
   letter-spacing: 0.1em;
   padding-left: 4px;
+}
+
+.burger {
+  display: none;
+  @include media-tablet {
+    position: absolute;
+    top: 49px;
+    right: 53px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 22px;
+    transition: 0.5s;
+  }
+}
+
+.burger.open {
+  transform: rotate(-90deg);
+  transition: 0.5s;
+}
+
+.line {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: $color-primary;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  transition: 1s;
+  opacity: 0;
+  animation: ani 0.5s forwards;
+}
+
+.shadow.open {
+  display: block;
+  transition: 1s;
+  visibility: visible;
+}
+
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.menu-logo {
+  display: none;
+  @include media-tablet {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+  }
 }
