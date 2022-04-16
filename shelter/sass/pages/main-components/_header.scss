@@ -47,12 +47,11 @@
   padding: 0;
   @include media-tablet {
     margin: 0;
-    padding-top: 248px;
+    padding-top: 249px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: $color-dark-3xl;
-    height: 100vh;
   }
 }
 
@@ -72,6 +71,7 @@
     color: $color-light-s;
   }
   @include media-tablet {
+    padding-bottom: 1px;
     display: inline-block;
     font-size: 32px;
     margin-bottom: 40px;

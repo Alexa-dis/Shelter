@@ -345,6 +345,11 @@ p {
   max-width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 1279px) {
+  .wrapper {
+    max-width: 1279px;
+  }
+}
 @media (max-width: 767px) {
   .wrapper {
     max-width: 767px;
@@ -355,6 +360,11 @@ p {
   .wrapper {
     max-width: 320px;
   }
+}
+
+.main_wrapper {
+  overflow: hidden;
+  position: relative;
 }
 
 @font-face {
@@ -552,8 +562,6 @@ h4 {
 
 .main__section {
   background: top repeat url(../../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  overflow: hidden;
-  position: relative;
 }
 
 .start__wrapper {
@@ -706,12 +714,11 @@ h4 {
 @media (max-width: 767px) {
   .navigation {
     margin: 0;
-    padding-top: 248px;
+    padding-top: 249px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     background-color: #292929;
-    height: 100vh;
   }
 }
 
@@ -730,6 +737,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .navigation_link {
+    padding-bottom: 1px;
     display: inline-block;
     font-size: 32px;
     margin-bottom: 40px;
@@ -1392,8 +1400,109 @@ h4 {
   }
 }
 
+.popup {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  top: 50vh;
+  left: 50vw;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup_wrapper {
+  width: 952px;
+  height: 552px;
+  border-radius: 9px;
+  position: relative;
+}
+
+.popup__content__wrapper {
+  width: 900px;
+  height: 500px;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  border-radius: 9px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fafafa;
+}
+
+.pet-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 9px;
+}
+
+.popup__content {
+  padding: 50px 22px 0 24px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: black;
+}
+
+.pet-name {
+  font-size: 35px;
+  line-height: 130%;
+  padding-bottom: 8px;
+  letter-spacing: 0.06em;
+}
+
+.pet-type, .pet-breed {
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+
+.pet-description {
+  font-size: 15px;
+  line-height: 114%;
+  padding: 40px 0;
+  letter-spacing: 0.06em;
+}
+
+.pet-list {
+  padding: 0 0 0 17px;
+  margin: 0;
+}
+
+.pet-list li::marker {
+  color: #f1cdb3;
+}
+
+.pet-list-item {
+  padding-bottom: 9.5px;
+}
+
+.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.pet-age-value, .pet-inoculations-value, .pet-diseases-value, .pet-parasites-value {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+.popup_close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(../../../assets/icons/modal_close_button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main_pets_wrapper {
+  position: relative;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .pets-header {
@@ -1401,10 +1510,20 @@ h4 {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 3;
   background-color: #ffffff;
 }
 @media (max-width: 1279px) {
+  .pets-header {
+    width: auto;
+    max-width: 100%;
+    padding: 30px 30px 0 30px;
+    height: 90px;
+  }
+}
+@media (max-width: 767px) {
   .pets-header {
     padding: 0;
     height: 120px;
@@ -1428,7 +1547,7 @@ h4 {
   .pets-navigation_link {
     display: inline-block;
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 38.5px;
   }
 }
 
@@ -1517,7 +1636,7 @@ h4 {
 @media (max-width: 767px) {
   .pets-navigation {
     margin: 0;
-    padding-top: 248px;
+    padding-top: 249px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

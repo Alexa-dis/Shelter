@@ -2,7 +2,7 @@
     max-width: $content-width;
     margin: 0 auto;
     @include media-laptop {
-        
+        max-width: $laptop-width;
     }
     @include media-tablet {
         max-width: $tablet-width;
@@ -11,4 +11,9 @@
     @include media-mobile-small {
         max-width: $mobile-small-width;
     }
+}
+
+.main_wrapper {
+    overflow: hidden;
+    position: relative;
 }

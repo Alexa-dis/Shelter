@@ -1,0 +1,98 @@
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    top: 50vh;
+    left: 50vw;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.popup_wrapper {
+    width: 952px;
+    height: 552px;  
+    border-radius: 9px;
+    position: relative;
+}
+
+.popup__content__wrapper {
+    width: 900px;
+    height: 500px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    border-radius: 9px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-light-s;
+}
+
+.pet-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+}
+
+.popup__content {
+    padding: 50px 22px 0 24px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: black;
+}
+
+.pet-name {
+    font-size: 35px;
+    line-height: 130%;
+    padding-bottom: 8px;
+    letter-spacing: 0.06em;
+}
+
+.pet-type, .pet-breed {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+.pet-description {
+    font-size: 15px;
+    line-height: 114%;
+    padding: 40px 0;
+    letter-spacing: 0.06em;
+}
+
+.pet-list {
+    padding: 0 0 0 17px;
+    margin: 0;
+}
+
+.pet-list li::marker {
+    color: $color-primary;
+}
+
+.pet-list-item {
+    padding-bottom: 9.5px;
+}
+
+.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.pet-age-value, .pet-inoculations-value, .pet-diseases-value, .pet-parasites-value {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.popup_close {
+    position: absolute;
+    right: 0;
+    top:0;
+    background-image: url(../../../assets/icons/modal_close_button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
