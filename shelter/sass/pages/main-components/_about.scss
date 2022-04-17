@@ -15,9 +15,11 @@
 .about__section__text {
     max-width: 430px;
     margin-right: 10px;
+    @include media-laptop {
+        margin: 0;
+    }
     @include media-tablet {
         max-width: 290px;
-        margin: 0;
     }
 }
 
@@ -28,7 +30,7 @@
 .about__spacer {
     margin-bottom: 25px;
     @include media-tablet {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
     }
 }
 

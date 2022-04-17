@@ -1,11 +1,13 @@
 .popup {
-    display: none;
     position: absolute;
     z-index: 50;
     top: 50vh;
     left: 50vw;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    display: none;
+    //opacity: 0;
+    //visibility: hidden;
 }
 
 .popup_wrapper {
@@ -95,4 +97,5 @@
     background-image: url(../../../assets/icons/modal_close_button.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-color: transparent ;
 }
