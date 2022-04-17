@@ -784,6 +784,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .burger {
+    cursor: pointer;
     position: absolute;
     top: 49px;
     right: 53px;
@@ -1576,6 +1577,7 @@ h4 {
 }
 @media (max-width: 767px) {
   .pets-burger {
+    cursor: pointer;
     position: absolute;
     top: 49px;
     right: 53px;

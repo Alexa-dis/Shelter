@@ -66,6 +66,7 @@
 .pets-burger {
     display: none;
     @include media-tablet {
+        cursor: pointer;
         position: absolute;
         top: 49px;
         right: 53px;
