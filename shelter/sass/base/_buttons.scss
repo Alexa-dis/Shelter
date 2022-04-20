@@ -101,3 +101,10 @@
         right: 43px;
     }
 }
+
+.pets_clider__buttons {
+    margin-bottom: 60px;
+    @include media-laptop {
+        margin-bottom:0;
+    }
+}
