@@ -559,6 +559,15 @@ h4 {
   }
 }
 
+.pets_clider__buttons {
+  margin-bottom: 60px;
+}
+@media (max-width: 1279px) {
+  .pets_clider__buttons {
+    margin-bottom: 0;
+  }
+}
+
 .main__section {
   background: top repeat url(../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
