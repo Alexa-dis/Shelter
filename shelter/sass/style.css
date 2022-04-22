@@ -834,6 +834,8 @@ h4 {
 
 .shadow.open {
   display: block;
+  width: 100%;
+  height: 100%;
   transition: 1s;
   visibility: visible;
 }
@@ -1411,12 +1413,15 @@ h4 {
 
 .popup {
   position: absolute;
-  z-index: 50;
-  top: 50vh;
-  left: 50vw;
-  margin-right: -50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 50;
   display: none;
+}
+
+.popup.open {
+  display: block;
 }
 
 .popup_wrapper {
@@ -1424,6 +1429,18 @@ h4 {
   height: 552px;
   border-radius: 9px;
   position: relative;
+}
+@media (max-width: 1279px) {
+  .popup_wrapper {
+    width: 673px;
+    height: 402px;
+  }
+}
+@media (max-width: 767px) {
+  .popup_wrapper {
+    width: 271px;
+    height: 393px;
+  }
 }
 
 .popup__content__wrapper {
@@ -1437,11 +1454,34 @@ h4 {
   left: 0;
   background-color: #fafafa;
 }
+@media (max-width: 1279px) {
+  .popup__content__wrapper {
+    width: 630px;
+    height: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .popup__content__wrapper {
+    width: 240px;
+    height: 341px;
+  }
+}
 
 .pet-img {
   width: 500px;
   height: 500px;
   border-radius: 9px;
+}
+@media (max-width: 1279px) {
+  .pet-img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .pet-img {
+    display: none;
+  }
 }
 
 .popup__content {
@@ -1452,12 +1492,23 @@ h4 {
   letter-spacing: 0.06em;
   color: black;
 }
+@media (max-width: 1279px) {
+  .popup__content {
+    padding: 10px 8px 0 11px;
+  }
+}
 
 .pet-name {
   font-size: 35px;
   line-height: 130%;
   padding-bottom: 8px;
   letter-spacing: 0.06em;
+}
+@media (max-width: 767px) {
+  .pet-name {
+    text-align: center;
+    padding: 0px 0 10px 0;
+  }
 }
 
 .pet-type, .pet-breed {
@@ -1466,16 +1517,34 @@ h4 {
   letter-spacing: 0.06em;
 }
 
+@media (max-width: 767px) {
+  .pet-identify {
+    text-align: center;
+  }
+}
+
 .pet-description {
   font-size: 15px;
   line-height: 114%;
   padding: 40px 0;
   letter-spacing: 0.06em;
 }
+@media (max-width: 1279px) {
+  .pet-description {
+    padding: 20px 0;
+    font-size: 13px;
+    line-height: 110%;
+  }
+}
 
 .pet-list {
   padding: 0 0 0 17px;
   margin: 0;
+}
+@media (max-width: 1279px) {
+  .pet-list {
+    padding: 0 0 0 14px;
+  }
 }
 
 .pet-list li::marker {
@@ -1484,6 +1553,11 @@ h4 {
 
 .pet-list-item {
   padding-bottom: 9.5px;
+}
+@media (max-width: 1279px) {
+  .pet-list-item {
+    padding-bottom: 5px;
+  }
 }
 
 .pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
@@ -1507,6 +1581,22 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
+}
+
+.shadowPopup {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.shadowPopup.open {
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .main_pets_wrapper {

@@ -4,7 +4,8 @@ const shadow = document.querySelector('.shadow');
 const body = document.querySelector('body');
 const logo = document.querySelector('.logo__wrapper');
 
-const petCards = document.querySelector('.pets__cards');
+const shadowPopup = document.querySelector('.shadowPopup');
+const petCardsWrapper = document.querySelector('.pets__cards');
 const petCard = document.querySelectorAll('.card');
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup_close');
@@ -15,23 +16,34 @@ function toggleMenu() {
     shadow.classList.toggle('open');
     logo.classList.toggle('open');
     body.classList.toggle('lock');
+    //popup.classList.toggle('open');
     }
 
 burger.addEventListener('click', toggleMenu);
 navigation.addEventListener('click', toggleMenu);
 shadow.addEventListener('click', toggleMenu);
 logo.addEventListener('click', toggleMenu);
-body.addEventListener(toggleMenu);
+//body.addEventListener(toggleMenu);
 
-// petCard.forEach((item) => {
-//     item.addEventListener('click' , () => {
-//         popup.style.display = 'block';
-//         console.log(popup.style);
-//         //popup.style.visibility = 'visible';
-//         //shadow.classList.toggle('open');
-//         //body.classList.toggle('lock');
-//     })
-// })
+petCard.forEach((item) => {
+    item.addEventListener('click' , () => {
+        popup.classList.add('open');
+        shadowPopup.classList.add('open');
+        body.classList.add('lock');
+    })
+})
+
+popupClose.addEventListener ('click', () => {
+        popup.classList.remove('open');
+        shadowPopup.classList.remove('open');
+        body.classList.remove('lock');
+})
+
+shadowPopup.addEventListener ('click', () => {
+    popup.classList.remove('open');
+    shadowPopup.classList.remove('open');
+    body.classList.remove('lock');
+})
 
 // const openPopup = () => {
 //     petCards.forEach(petCard => {
