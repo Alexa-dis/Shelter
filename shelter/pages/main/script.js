@@ -4,11 +4,7 @@ const shadow = document.querySelector('.shadow');
 const body = document.querySelector('body');
 const logo = document.querySelector('.logo__wrapper');
 
-const shadowPopup = document.querySelector('.shadowPopup');
-const petCardsWrapper = document.querySelector('.pets__cards');
-const petCard = document.querySelectorAll('.card');
-const popup = document.querySelector('.popup');
-const popupClose = document.querySelector('.popup_close');
+
 
 function toggleMenu() {
     burger.classList.toggle('open');
@@ -25,27 +21,7 @@ shadow.addEventListener('click', toggleMenu);
 logo.addEventListener('click', toggleMenu);
 //body.addEventListener(toggleMenu);
 
-petCard.forEach((item) => {
-    item.addEventListener('click' , () => {
-        popup.classList.add('open');
-        shadowPopup.classList.add('open');
-        body.classList.add('lock');
-        //document.querySelector("body > div.popup.open > div > div > img") = 
 
-    })
-})
-
-popupClose.addEventListener ('click', () => {
-        popup.classList.remove('open');
-        shadowPopup.classList.remove('open');
-        body.classList.remove('lock');
-})
-
-shadowPopup.addEventListener ('click', () => {
-    popup.classList.remove('open');
-    shadowPopup.classList.remove('open');
-    body.classList.remove('lock');
-})
 
 
 //SLIDER
@@ -93,78 +69,208 @@ sliderButtonLeft.addEventListener('click', moveLeft);
 sliderButtonRight.addEventListener('click', moveRight)
 
 sliderCards.addEventListener('animationend', (animationEvent) => {
-    let randomArray = [];
-    while (randomArray.length < 3) {
-        let randomnumber = Math.floor(Math.random()*11) + 1;
-        if(randomArray.indexOf(randomnumber) > -1) continue;
-        randomArray[randomArray.length] = randomnumber;
+    if(window.matchMedia('(min-width:1280px)').matches) {
+        let randomArray = [];
+        while (randomArray.length < 3) {
+            let randomnumber = Math.floor(Math.random()*11) + 1;
+            if(randomArray.indexOf(randomnumber) > -1) continue;
+            randomArray[randomArray.length] = randomnumber;
+        }
+
+        if (animationEvent.animationName === 'move-left') {
+            sliderCards.classList.remove('transition-left');
+            
+            const leftItems = cardsLeft.innerHTML;
+
+            cardsActive.innerHTML = leftItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card2 = document.createElement('div');
+            card2.classList.add('card');
+            card2.innerHTML = `
+            <img src="${petImgs[randomArray[1]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card3 = document.createElement('div');
+            card3.classList.add('card');
+            card3.innerHTML = `
+            <img src="${petImgs[randomArray[2]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[2]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsLeft.innerHTML = '';
+            cardsLeft.appendChild(card1);
+            cardsLeft.appendChild(card2);
+            cardsLeft.appendChild(card3);
+        }
+        else {
+            sliderCards.classList.remove('transition-right')
+            const rightItems = cardsRight.innerHTML;
+
+            cardsActive.innerHTML = rightItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card2 = document.createElement('div');
+            card2.classList.add('card');
+            card2.innerHTML = `
+            <img src="${petImgs[randomArray[1]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card3 = document.createElement('div');
+            card3.classList.add('card');
+            card3.innerHTML = `
+            <img src="${petImgs[randomArray[1]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsRight.innerHTML = '';
+            cardsRight.appendChild(card1);
+            cardsRight.appendChild(card2);
+            cardsRight.appendChild(card3);
+        }
+    } else if (window.matchMedia('(min-width:768px)').matches) {
+        let randomArray = [];
+        while (randomArray.length < 2) {
+            let randomnumber = Math.floor(Math.random()*11) + 1;
+            if(randomArray.indexOf(randomnumber) > -1) continue;
+            randomArray[randomArray.length] = randomnumber;
+        }
+
+        if (animationEvent.animationName === 'move-left') {
+            sliderCards.classList.remove('transition-left');
+            
+            const leftItems = cardsLeft.innerHTML;
+
+            cardsActive.innerHTML = leftItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card2 = document.createElement('div');
+            card2.classList.add('card');
+            card2.innerHTML = `
+            <img src="${petImgs[randomArray[1]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsLeft.innerHTML = '';
+            cardsLeft.appendChild(card1);
+            cardsLeft.appendChild(card2);
+        }
+        else {
+            sliderCards.classList.remove('transition-right')
+            const rightItems = cardsRight.innerHTML;
+
+            cardsActive.innerHTML = rightItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            const card2 = document.createElement('div');
+            card2.classList.add('card');
+            card2.innerHTML = `
+            <img src="${petImgs[randomArray[1]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsRight.innerHTML = '';
+            cardsRight.appendChild(card1);
+            cardsRight.appendChild(card2);
+        }
+    } else if (window.matchMedia('(min-width:320px)').matches) {
+        let randomArray = [];
+        while (randomArray.length < 1) {
+            let randomnumber = Math.floor(Math.random()*11) + 1;
+            if(randomArray.indexOf(randomnumber) > -1) continue;
+            randomArray[randomArray.length] = randomnumber;
+        }
+
+        if (animationEvent.animationName === 'move-left') {
+            sliderCards.classList.remove('transition-left');
+            
+            const leftItems = cardsLeft.innerHTML;
+
+            cardsActive.innerHTML = leftItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsLeft.innerHTML = '';
+            cardsLeft.appendChild(card1);
+        }
+        else {
+            sliderCards.classList.remove('transition-right')
+            const rightItems = cardsRight.innerHTML;
+
+            cardsActive.innerHTML = rightItems;
+
+            const card1 = document.createElement('div');
+            card1.classList.add('card');
+            card1.innerHTML = `
+            <img src="${petImgs[randomArray[0]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
+            <button class="button button_bordered">Learn more</button>`
+
+            cardsRight.innerHTML = '';
+            cardsRight.appendChild(card1);
+        }
     }
-
-    if (animationEvent.animationName === 'move-left') {
-        sliderCards.classList.remove('transition-left');
-        
-        const leftItems = cardsLeft.innerHTML;
-
-        cardsActive.innerHTML = leftItems;
-
-        const card1 = document.createElement('div');
-        card1.classList.add('card');
-        card1.innerHTML = `
-        <img src="${petImgs[randomArray[0]]}" alt="">
-        <h4 class="pet__name">${petNames[randomArray[0]]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        const card2 = document.createElement('div');
-        card2.classList.add('card');
-        card2.innerHTML = `
-        <img src="${petImgs[randomArray[1]]}" alt="">
-        <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        const card3 = document.createElement('div');
-        card3.classList.add('card');
-        card3.innerHTML = `
-        <img src="${petImgs[randomArray[2]]}" alt="">
-        <h4 class="pet__name">${petNames[randomArray[2]]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        cardsLeft.innerHTML = '';
-        cardsLeft.appendChild(card1);
-        cardsLeft.appendChild(card2);
-        cardsLeft.appendChild(card3);
-    }
-    else {
-        sliderCards.classList.remove('transition-right')
-        const rightItems = cardsRight.innerHTML;
-
-        cardsActive.innerHTML = rightItems;
-
-        const card1 = document.createElement('div');
-        card1.classList.add('card');
-        card1.innerHTML = `
-        <img src="${petImgs[Math.floor(Math.random() * 12)]}" alt="pets-woody">
-        <h4 class="pet__name">${petNames[Math.floor(Math.random() * 12)]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        const card2 = document.createElement('div');
-        card2.classList.add('card');
-        card2.innerHTML = `
-        <img src="${petImgs[Math.floor(Math.random() * 12)]}" alt="pets-woody">
-        <h4 class="pet__name">${petNames[Math.floor(Math.random() * 12)]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        const card3 = document.createElement('div');
-        card3.classList.add('card');
-        card3.innerHTML = `
-        <img src="${petImgs[Math.floor(Math.random() * 12)]}" alt="pets-woody">
-        <h4 class="pet__name">${petNames[Math.floor(Math.random() * 12)]}</h4>
-        <button class="button button_bordered">Learn more</button>`
-
-        cardsRight.innerHTML = '';
-        cardsRight.appendChild(card1);
-        cardsRight.appendChild(card2);
-        cardsRight.appendChild(card3);
-    }
+    
     sliderButtonLeft.addEventListener('click', moveLeft);
     sliderButtonRight.addEventListener('click', moveRight);
+    
+})
+
+
+//POPUP
+const shadowPopup = document.querySelector('.shadowPopup');
+const petCardsWrapper = document.querySelector('.pets__cards');
+const petCard = document.querySelectorAll('.card');
+const popup = document.querySelector('.popup');
+const popupClose = document.querySelector('.popup_close');
+
+petCard.forEach((item) => {
+    item.addEventListener('click' , () => {
+        popup.classList.add('open');
+        shadowPopup.classList.add('open');
+        body.classList.add('lock');
+    })
+})
+
+popupClose.addEventListener ('click', () => {
+        popup.classList.remove('open');
+        shadowPopup.classList.remove('open');
+        body.classList.remove('lock');
+})
+
+shadowPopup.addEventListener ('click', () => {
+    popup.classList.remove('open');
+    shadowPopup.classList.remove('open');
+    body.classList.remove('lock');
 })
