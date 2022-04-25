@@ -133,8 +133,8 @@ sliderCards.addEventListener('animationend', (animationEvent) => {
             const card3 = document.createElement('div');
             card3.classList.add('card');
             card3.innerHTML = `
-            <img src="${petImgs[randomArray[1]]}" alt="pets-woody">
-            <h4 class="pet__name">${petNames[randomArray[1]]}</h4>
+            <img src="${petImgs[randomArray[2]]}" alt="pets-woody">
+            <h4 class="pet__name">${petNames[randomArray[2]]}</h4>
             <button class="button button_bordered">Learn more</button>`
 
             cardsRight.innerHTML = '';
