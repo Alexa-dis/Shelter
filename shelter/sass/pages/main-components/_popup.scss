@@ -164,9 +164,14 @@
     width: 100%;
     height: 100%;
     display: none;
+    cursor: pointer;
     //transition: 1s;
     //opacity: 0;
     //animation: ani 0.5s forwards;
+}
+
+.shadowPopup:hover .popup_close{
+    background-color: $color-primary-light;
 }
 
 .shadowPopup.open {

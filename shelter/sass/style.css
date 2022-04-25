@@ -1703,6 +1703,11 @@ h4 {
   width: 100%;
   height: 100%;
   display: none;
+  cursor: pointer;
+}
+
+.shadowPopup:hover .popup_close {
+  background-color: #fddcc4;
 }
 
 .shadowPopup.open {
