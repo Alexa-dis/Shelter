@@ -1547,6 +1547,7 @@ h4 {
   height: 552px;
   border-radius: 9px;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 1279px) {
   .popup_wrapper {
@@ -1562,6 +1563,7 @@ h4 {
 }
 
 .popup__content__wrapper {
+  cursor: default;
   width: 900px;
   height: 500px;
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
