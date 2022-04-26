@@ -1,5 +1,5 @@
 .popup {
-    position: absolute;
+    position: fixed;
     top:  50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -12,10 +12,15 @@
     display: none;
     //opacity: 0;
     //visibility: hidden;
+    margin: auto;
 }
 
 .popup.open{
     display: block;
+    position: fixed;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .popup_wrapper {
@@ -151,7 +156,7 @@
     position: absolute;
     right: 0;
     top:0;
-    background-image: url(../../assets/icons/modal_close_button.svg);
+    background-image: url(../assets/icons/modal_close_button.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent ;
