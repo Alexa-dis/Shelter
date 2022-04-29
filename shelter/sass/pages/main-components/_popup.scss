@@ -1,0 +1,191 @@
+.popup {
+    position: fixed;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    // position: absolute;
+    z-index: 50;
+    // top: 100vh;
+    // left: 100vw;
+    // margin-right: -50%;
+    // transform: translate(-50%, -50%);
+    display: none;
+    //opacity: 0;
+    //visibility: hidden;
+    margin: auto;
+}
+
+.popup.open{
+    display: block;
+    position: fixed;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup_wrapper {
+    width: 952px;
+    height: 552px;  
+    border-radius: 9px;
+    position: relative;
+    //text-align: center;
+    cursor: pointer;
+    @include media-laptop {
+        width: 673px;
+        height: 402px;
+    }
+    @include media-tablet {
+        width: 271px;
+        height: 393px;
+    }
+}
+
+.popup__content__wrapper {
+    cursor: default;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    border-radius: 9px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-light-s;
+    @include media-laptop {
+        width: 630px;
+        height: 350px;
+    }
+    @include media-tablet {
+        width: 240px;
+        height: 341px;
+    }
+}
+
+.pet-img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+    @include media-laptop {
+        width: 350px;
+        height: 350px;
+    }
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.popup__content {
+    padding: 50px 22px 0 24px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: black;
+    @include media-laptop {
+        padding: 10px 8px 0 11px;
+    }
+    
+}
+
+.pet-name {
+    font-size: 35px;
+    line-height: 130%;
+    padding-bottom: 8px;
+    letter-spacing: 0.06em;
+    @include media-tablet {
+        text-align: center;
+        padding: 0px 0 10px 0;
+    }
+}
+
+.pet-type, .pet-breed {
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+.pet-identify {
+    @include media-tablet {
+        text-align: center;
+    }
+}
+
+.pet-description {
+    font-size: 15px;
+    line-height: 114%;
+    padding: 40px 0;
+    letter-spacing: 0.06em;
+    @include media-laptop {
+        padding: 20px 0;
+        font-size: 13px;
+        line-height: 110%;
+    }
+}
+
+.pet-list {
+    padding: 0 0 0 17px;
+    margin: 0;
+    @include media-laptop {
+        padding: 0 0 0 14px;
+    }
+}
+
+.pet-list li::marker {
+    color: $color-primary;
+}
+
+.pet-list-item {
+    padding-bottom: 9.5px;
+    @include media-laptop {
+        padding-bottom: 5px;
+    }
+}
+
+.pet-age, .pet-inoculations, .pet-diseases, .pet-parasites {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.pet-age-value, .pet-inoculations-value, .pet-diseases-value, .pet-parasites-value {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.popup_close {
+    position: absolute;
+    right: 0;
+    top:0;
+    background-image: url(../assets/icons/modal_close_button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent ;
+}
+
+.shadowPopup {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    //transition: 1s;
+    //opacity: 0;
+    //animation: ani 0.5s forwards;
+}
+
+.shadowPopup:hover .popup_close{
+    background-color: $color-primary-light;
+}
+
+.shadowPopup.open {
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    //transition: 1s;
+    //visibility: visible;
+}

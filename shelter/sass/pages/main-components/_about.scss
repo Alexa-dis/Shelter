@@ -1,0 +1,63 @@
+.about__section__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 165px 100px;
+    @include media-laptop {
+        flex-direction: column-reverse;
+        padding: 80px 135px 100px;
+    }
+    @include media-tablet {
+        padding: 44px 16px;
+    }
+}
+
+.about__section__text {
+    max-width: 430px;
+    margin-right: 10px;
+    @include media-laptop {
+        margin: 0;
+    }
+    @include media-tablet {
+        max-width: 290px;
+    }
+}
+
+.about__headling {
+    color: $color-dark-l;
+}
+
+.about__spacer {
+    margin-bottom: 25px;
+    @include media-tablet {
+        margin-bottom: 22px;
+    }
+}
+
+.about__subheading {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: $color-dark-xl;
+    @include media-tablet {
+        text-align: justify;
+        width: 270px;
+    }
+}
+
+.pet__name {
+    margin-bottom: 30px;
+}
+
+.about-pets__img {
+    margin-left:10px;
+    @include media-laptop {
+        margin: 80px 0 0 0;
+    }
+    @include media-tablet {
+        margin: 42px 0 0 0;
+        width: 260px;
+        height: 353.6px;
+    }
+}
